@@ -250,7 +250,7 @@
 
 	<div id="container">
 		<div id="header">
-			<h1><a href="/?TSSESSION=666b7fb11cd8dd553e1326705f0c95ec">D r a n &nbsp;C o m p u t e r &nbsp;S c i e n c e &nbsp;L a b </a></h1>
+			<h1><a href="/">D r a n &nbsp;C o m p u t e r &nbsp;S c i e n c e &nbsp;L a b </a></h1>
 			<div class="blogMenu">
 				<ul>
 				  	<!---->
@@ -595,7 +595,7 @@ Programming and Controlling Self-Folding Robots</b><br /><u>Byoungkwon An</u>, D
 
 				<!-- RSS 링크 -->
 					<div class="botton">
-<!-- 						<a href="/rss?TSSESSION=666b7fb11cd8dd553e1326705f0c95ec" onclick="window.open(this.href); return false"> -->
+<!-- 						<a href="/rss" onclick="window.open(this.href); return false"> -->
 <!--						<img src="/skin/customize/1/images/rss.gif" alt="rss"/> </a>  -->
 					</div>
 
@@ -608,7 +608,7 @@ Programming and Controlling Self-Folding Robots</b><br /><u>Byoungkwon An</u>, D
 
 			</div>
 			<div class="copyright">
-				<a href="/?TSSESSION=666b7fb11cd8dd553e1326705f0c95ec"> Byoungkwon An</a>’s Blog is powered by 
+				<a href="/"> Byoungkwon An</a>’s Blog is powered by 
 				<a href="http://tattertools.com" onclick="window.open(this.href); return false">Tattertools 1.1.0.2 : Friends</a> /
 				Designed by <a href="http://plyfly.net" onclick="window.open(this.href); return false">plyfly.net</a>
 			</div>

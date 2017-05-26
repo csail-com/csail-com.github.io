@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+	<channel>
+		<title>Dran Computer Science Lab</title>
+		<link>http://drancom.com/</link>
+		<description></description>
+		<language>ko</language>
+		<pubDate>Fri, 09 Sep 2016 13:14:26 -0400</pubDate>
+		<generator>Tattertools 1.1.0.2 : Friends</generator>
+		<item>
+			<title>Byoungkwon An (Kwon An)</title>
+			<link>http://drancom.com/entry/Byoungkwon-An-Kwon-An</link>
+			<description>&lt;font color=&quot;#000&amp;quot;&quot;&gt;&lt;p&gt;
+  &lt;font face=&quot;arial,helvetica,sans-serif&quot;&gt;&lt;a name=&quot;st&quot;&gt; &lt;/a&gt;
+  &lt;b&gt;&lt;font size=&quot;5&quot;&gt;Byoungkwon An&amp;nbsp; ( Kwon An )&lt;/font&gt;&lt;/b&gt;
+  &lt;br /&gt;&lt;/font&gt;
+ &lt;/p&gt;
+ &lt;p&gt;
+&lt;!--
+  &lt;font face=&quot;arial,helvetica,sans-serif&quot;&gt;
+  &lt;font size=&quot;2&quot;&gt;Senior Research Scientist&lt;br /&gt;
+                    Autodesk Research &lt;br /&gt;
+                    Bio / Nano / Programmable Matter Group&lt;/font&gt;&lt;br /&gt;&lt;/font&gt;
+ &lt;/p&gt;
+ &lt;p&gt;
+  &lt;font face=&quot;arial,helvetica,sans-serif&quot;&gt;
+  &lt;font size=&quot;2&quot;&gt;SM in Computer Science &lt;font color=&quot;#000&amp;quot;&quot;&gt;at &lt;/font&gt;Massachusetts Institute of Technology (MIT) &lt;br /&gt;
+                    Computer Science and Artificial Intelligence Laboratory (CSAIL) &lt;br /&gt;
+                    Advisor: Prof. Daniela Rus&lt;/font&gt;
+  &lt;br /&gt;&lt;/font&gt;
+ &lt;/p&gt;
+ &lt;p&gt;
+  &lt;font face=&quot;arial,helvetica,sans-serif&quot;&gt;
+  &lt;font size=&quot;2&quot;&gt;BS in Physics &lt;font color=&quot;#000&amp;quot;&quot;&gt;at &lt;/font&gt;Soongsil University &lt;br /&gt;
+                    Advisor: Prof. Jin Min Kim&lt;/font&gt;
+  &lt;br /&gt;&lt;/font&gt;
+ &lt;/p&gt;
+ --&gt;
+ &lt;/p&gt;&lt;p&gt;
+  &lt;font face=&quot;arial,helvetica,sans-serif&quot;&gt;E-mail: &lt;!-- kwon.an at autodesk.com &lt;br /&gt; 
+                                         &lt;font color=&quot;FFFFFF&quot;&gt; E-mail:&lt;/font&gt; --&gt;  dran at csail.mit.edu&lt;/font&gt;&lt;br /&gt;
+&lt;font face=&quot;arial,helvetica,sans-serif&quot;&gt;Web: &lt;a href=&quot;http://www.drancom.com&quot; target=&quot;_blank&quot;&gt;www.drancom.com&lt;/a&gt;
+&lt;/font&gt;
+ &lt;/p&gt;
+ &lt;br /&gt;
+
+ &lt;font face=&quot;arial,helvetica,sans-serif&quot; size=&quot;4&quot;&gt;&lt;b&gt;Publications&lt;/b&gt; &lt;a name=&quot;publications&quot;&gt; &lt;/a&gt;
+ &lt;/font&gt;
+ &lt;font face=&quot;arial,helvetica,sans-serif&quot; size=&quot;2&quot;&gt;
+ [&lt;a href=&quot;http://scholar.google.com/citations?user=y1h7segAAAAJ&amp;amp;hl=en&amp;amp;oi=sra&quot; target=&quot;_blank&quot;&gt;Google Scholar&lt;/a&gt;]
+ &lt;br /&gt;&lt;/font&gt;
+
+&lt;table border=&quot;0&quot;&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+  &lt;td&gt;
+  &lt;div class=&quot;imageblock left&quot; style=&quot;float: left; margin-right: 10px;&quot;&gt;&lt;img src=&quot;/tn/propellers_1.jpg&quot; alt=&quot;User inserted image&quot; width=&quot;80&quot;&gt;&lt;/div&gt; 
+ &lt;/td&gt;
+ &lt;td&gt;
+  &lt;p&gt;12. &lt;font color=&quot;#000&amp;quot;&quot;&gt;&lt;font face=&quot;arial,helvetica,sans-serif&quot;&gt;
+  &lt;b&gt;Folding Angle Regulation by Curved Crease Design for Self-Assembling Origami Propellers&lt;/b&gt; &lt;br /&gt;Shuhei Miyashita, Isabella DiDio, Ishwarya Ananthabhotla, &lt;br /&gt;&lt;u&gt;Byoungkwon An&lt;/u&gt;, Cynthia Sung, Slava Arabagi, Daniela Rus&lt;br /&gt; Journal of Mechanisms and Robotics, 2015, [&lt;a href=&quot;http://people.csail.mit.edu/dran/paper/miy2015jmr.pdf&quot; target=&quot;_blank&quot;&gt;pdf&lt;/a&gt;] &lt;/font&gt;&lt;/font&gt;&lt;/p&gt;
+ &lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+  &lt;td&gt;
+  &lt;div class=&quot;imageblock left&quot; style=&quot;float: left; margin-right: 10px;&quot;&gt;&lt;img src=&quot;/tn/pouchmotor_1.jpg&quot; alt=&quot;User inserted image&quot; width=&quot;80&quot;&gt;&lt;/div&gt; 
+ &lt;/td&gt;
+ &lt;td&gt;
+  &lt;p&gt;11. &lt;font color=&quot;#000&amp;quot;&quot;&gt;&lt;font face=&quot;arial,helvetica,sans-serif&quot;&gt;
+  &lt;b&gt;Pouch Motors: Printable Soft Actuators Integrated with Computational Design&lt;/b&gt; &lt;br /&gt;Ryuma Niiyama, Xu Sun, Cynthia Sung, &lt;u&gt;Byoungkwon An&lt;/u&gt;, Daniela Rus, Sangbae Kim&lt;br /&gt; Soft Robotics, 2015, [&lt;a href=&quot;http://online.liebertpub.com/doi/abs/10.1089/soro.2014.0023?journalCode=soro&amp;amp;&quot; target=&quot;_blank&quot;&gt;pdf&lt;/a&gt;] &lt;/font&gt;&lt;/font&gt;&lt;/p&gt;&lt;u&gt;
+ &lt;/u&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+  &lt;td&gt;
+  &lt;div class=&quot;imageblock left&quot; style=&quot;float: left; margin-right: 10px;&quot;&gt;&lt;img src=&quot;/tn/bunny_ex1.jpg&quot; alt=&quot;User inserted image&quot; width=&quot;80&quot;&gt;&lt;/div&gt; 
+ &lt;/td&gt;
+ &lt;td&gt;
+  &lt;p&gt;10. &lt;font color=&quot;#000&amp;quot;&quot;&gt;&lt;font face=&quot;arial,helvetica,sans-serif&quot;&gt;
+  &lt;b&gt;An End-to-End Approach to Making Self-Folded 3D Surface Shapes by Uniform Heating&lt;/b&gt; &lt;br /&gt;&lt;u&gt;Byoungkwon An&lt;/u&gt;, Shuhei Miyashita, Michael T. Tolley, Daniel M. Aukes, Laura Meeker, Erik D. Demaine, Martin L. Demaine, Robert J. Wood, Daniela Rus&lt;br /&gt;IEEE International Conference on Robotics and Automation (ICRA), Hong Kong, China, 2014, [&lt;a href=&quot;http://people.csail.mit.edu/dran/paper/An2014icra.pdf&quot; target=&quot;_blank&quot;&gt;pdf&lt;/a&gt;] [&lt;a href=&quot;http://youtu.be/NtBAKb_zmTs&quot; target=&quot;_blank&quot;&gt;video&lt;/a&gt;] &lt;/font&gt;&lt;/font&gt;&lt;/p&gt;
+ &lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+  &lt;td&gt;
+  &lt;div class=&quot;imageblock left&quot; style=&quot;float: left; margin-right: 10px;&quot;&gt;&lt;img src=&quot;/tn/mcdonalds.jpg&quot; alt=&quot;User inserted image&quot; height=&quot;71&quot; width=&quot;80&quot;&gt;&lt;/div&gt; 
+ &lt;/td&gt;
+ &lt;td&gt;
+  &lt;p&gt;9. &lt;font color=&quot;#000&amp;quot;&quot;&gt;&lt;font face=&quot;arial,helvetica,sans-serif&quot;&gt;
+  &lt;b&gt;An Looking Beyond the Visible Scene&lt;/b&gt; &lt;br /&gt;&lt;u&gt;Byoungkwon An*&lt;/u&gt;, Aditya Khosla*, Joseph J. Lim*, Antonio Torralba&lt;br /&gt; (* indicates equal contribution)&lt;br /&gt;IEEE International Conference on Computer Vision and Pattern Recognition (CVPR), Columbus, Ohio, 2014, [&lt;a href=&quot;http://people.csail.mit.edu/dran/paper/An2014cvpr.pdf&quot; target=&quot;_blank&quot;&gt;pdf&lt;/a&gt;] &lt;/font&gt;&lt;/font&gt;&lt;/p&gt;
+ &lt;/td&gt;
+&lt;/tr&gt;
+
+
+&lt;tr&gt;
+ &lt;td&gt;
+  &lt;div class=&quot;imageblock left&quot; style=&quot;float: left; margin-right: 10px;&quot;&gt;&lt;img src=&quot;/tn/dpsf1.jpg&quot; alt=&quot;User inserted image&quot; height=&quot;71&quot; width=&quot;80&quot;&gt;&lt;/div&gt;
+ &lt;/td&gt;
+ &lt;td&gt;
+ &lt;p&gt;8.&lt;font color=&quot;#000&amp;quot;&quot;&gt;&lt;font face=&quot;arial,helvetica,sans-serif&quot;&gt;&lt;b&gt;
+Designing and Programming Self-Folding Sheets &lt;/b&gt;&lt;br /&gt;&lt;u&gt;Byoungkwon An&lt;/u&gt;, Daniela Rus&lt;br /&gt;Robotics and Autonomous Systems, 2014, [&lt;a href=&quot;http://people.csail.mit.edu/dran/paper/An2014ras.pdf&quot; target=&quot;_blank&quot;&gt;pdf&lt;/a&gt;] [&lt;a href=&quot;http://youtu.be/E4-s3fkIBEM&quot; target=&quot;_blank&quot;&gt;video&lt;/a&gt;] &lt;/font&gt;
+ &lt;/font&gt;&lt;/p&gt;
+ &lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+  &lt;td&gt;
+  &lt;div class=&quot;imageblock left&quot; style=&quot;float: left; margin-right: 10px;&quot;&gt;&lt;img src=&quot;/tn/iser2014.jpg&quot; alt=&quot;User inserted image&quot; height=&quot;71&quot; width=&quot;80&quot;&gt;&lt;/div&gt; 
+ &lt;/td&gt;
+ &lt;td&gt;
+  &lt;p&gt;7. &lt;font color=&quot;#000&amp;quot;&quot;&gt;&lt;font face=&quot;arial,helvetica,sans-serif&quot;&gt;
+  &lt;b&gt;A Design Environment for the Rapid Specification and Fabrication of Printable Robots&lt;/b&gt; &lt;br /&gt;Ankur Mehta, Nicola Bezzo, &lt;u&gt;Byoungkwon An&lt;/u&gt;, Peter Gebhard, Vijay Kumar, Insup Lee, Daniela Rus&lt;br /&gt;International Symposium on Experimental Robotics (ISER), Marrakech and Essaouira, Morocco, 2014, [&lt;a href=&quot;http://people.csail.mit.edu/dran/paper/iser2014.pdf&quot; target=&quot;_blank&quot;&gt;pdf&lt;/a&gt;]  &lt;/font&gt;&lt;/font&gt;&lt;/p&gt;
+ &lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+ &lt;td&gt;
+  &lt;div class=&quot;imageblock left&quot; style=&quot;float: left; margin-right: 10px;&quot;&gt;&lt;img src=&quot;/tn/dpsf3.jpg&quot; alt=&quot;User inserted image&quot; height=&quot;71&quot; width=&quot;80&quot;&gt;&lt;/div&gt; 
+ &lt;/td&gt;
+ &lt;td&gt;
+&lt;p&gt;6. &lt;font face=&quot;arial,helvetica,sans-serif&quot;&gt;&lt;b&gt;
+Programming and Controlling Self-Folding Robots&lt;/b&gt;&lt;br /&gt;&lt;u&gt;Byoungkwon An&lt;/u&gt;, Daniela Rus&lt;br /&gt;IEEE International Conference on Robotics and Automation (ICRA), St. Paul, Minnesota, 2012, [&lt;a href=&quot;http://people.csail.mit.edu/dran/paper/An2012icra.pdf&quot; target=&quot;_blank&quot;&gt;pdf&lt;/a&gt;] &lt;/font&gt;&lt;/p&gt;
+ &lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+ &lt;td&gt;
+&lt;div class=&quot;imageblock left&quot; style=&quot;float: left; margin-right: 10px;&quot;&gt;&lt;img src=&quot;http://drancom.com/attach/1/6130381312.jpg&quot; width=&quot;80&quot; height=&quot;83&quot; alt=&quot;User inserted image&quot; /&gt;&lt;/div&gt;
+ &lt;/td&gt;
+ &lt;td&gt;
+&lt;p&gt;5. &lt;font face=&quot;arial,helvetica,sans-serif&quot;&gt;&lt;b&gt;Planning to Fold Multiple Objects from a Single Self-Folding Sheet&lt;u&gt; &lt;br /&gt;&lt;/u&gt;&lt;/b&gt;&lt;u&gt;Byoungkwon An&lt;/u&gt;, Nadia&lt;b&gt; &lt;/b&gt;Benbernou, Erik Demaine, Daniela Rus&lt;br /&gt;Robotica, 29(1): 87-102, 2011, [&lt;a href=&quot;http://people.csail.mit.edu/dran/paper/An2011rob.pdf&quot; target=&quot;_blank&quot;&gt;pdf&lt;/a&gt;] 
+ &lt;/font&gt;&lt;/p&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+ &lt;td&gt;
+  &lt;div class=&quot;imageblock left&quot; style=&quot;float: left; margin-right: 10px;&quot;&gt;&lt;img src=&quot;/tn/oribot.jpg&quot; alt=&quot;User inserted image&quot; height=&quot;71&quot; width=&quot;80&quot;&gt;&lt;/div&gt; 
+ &lt;/td&gt;
+ &lt;td&gt;
+  &lt;p&gt;4. &lt;font face=&quot;arial,helvetica,sans-serif&quot;&gt;&lt;b&gt;Robotic Origamis: Self-Morphing Modular Robots&lt;/b&gt;&lt;br /&gt;&lt;/font&gt;&lt;font face=&quot;arial,helvetica,sans-serif&quot;&gt;Jamie Paik, &lt;u&gt;Byoungkwon An&lt;/u&gt;, Daniela Rus, Robert Wood&lt;br /&gt;International Conference on Morphological Computation (ICMC), Venice, Italy, 2011, [&lt;a href=&quot;http://people.csail.mit.edu/dran/paper/PA2011icmc.pdf&quot; target=&quot;_blank&quot;&gt;pdf&lt;/a&gt;]&lt;/font&gt;&lt;/p&gt;
+ &lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+ &lt;td&gt;
+  &lt;div class=&quot;imageblock left&quot; style=&quot;float: left; margin-right: 10px;&quot;&gt;&lt;img src=&quot;/tn/pm1.jpg&quot; alt=&quot;User inserted image&quot; height=&quot;71&quot; width=&quot;80&quot;&gt;&lt;/div&gt; 
+ &lt;/td&gt;
+ &lt;td&gt;
+&lt;p&gt; 3. &lt;font face=&quot;arial,helvetica,sans-serif&quot;&gt;&lt;b&gt;Programmable Matter by Folding&lt;/b&gt;&lt;br /&gt;&lt;/font&gt;&lt;font face=&quot;arial,helvetica,sans-serif&quot;&gt;Elliot Hawkes, &lt;u&gt;Byoungkwon An&lt;/u&gt;, Nadia Benbernou, Hiroto Tanaka, Sangbae Kim, Erik Demaine, Daniela Rus, Robert Wood &lt;br /&gt;Proceedings of the National Academy of Sciences (PNAS), 107(28): 12441-12445, 2010, [&lt;a href=&quot;http://people.csail.mit.edu/dran/paper/HA2010pnas.pdf&quot; target=&quot;_blank&quot;&gt;pdf&lt;/a&gt;] [&lt;a href=&quot;http://youtu.be/vNhE25GgwDM&quot; target=&quot;_blank&quot;&gt;video&lt;/a&gt;]&lt;/font&gt;&lt;/p&gt;
+ &lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+ &lt;td&gt;
+&lt;div class=&quot;imageblock left&quot; style=&quot;float: left; margin-right: 10px;&quot;&gt;&lt;img src=&quot;http://drancom.com/attach/1/6208751951.jpg&quot; width=&quot;80&quot; height=&quot;88&quot; alt=&quot;User inserted image&quot; /&gt;&lt;/div&gt;
+ &lt;/td&gt;
+ &lt;td&gt;
+&lt;p&gt;2. &lt;font face=&quot;arial,helvetica,sans-serif&quot;&gt;&lt;b&gt;Making Shapes from Modules by Magnification&lt;/b&gt;&lt;br /&gt;&lt;/font&gt;&lt;font face=&quot;arial,helvetica,sans-serif&quot;&gt;&lt;u&gt;Byoungkwon An&lt;/u&gt;, Daniela Rus,&amp;nbsp; &lt;br /&gt;IEEE/RSJ International Conference on Intelligent Robots and System (IROS), Taipei, Taiwan, 2010, [&lt;a href=&quot;http://people.csail.mit.edu/dran/paper/An2010iros.pdf&quot; target=&quot;_blank&quot;&gt;pdf&lt;/a&gt;] [&lt;a href=&quot;http://youtu.be/u7Tf_ohHoFM&quot; target=&quot;_blank&quot;&gt;video&lt;/a&gt;]&lt;/font&gt;&lt;/p&gt;
+ &lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+ &lt;td&gt;
+&lt;div class=&quot;imageblock left&quot; style=&quot;float: left; margin-right: 10px;&quot;&gt;&lt;img src=&quot;http://drancom.com/attach/1/5309448684.jpg&quot; width=&quot;80&quot; height=&quot;82&quot; alt=&quot;User inserted image&quot; /&gt;&lt;/div&gt;
+ &lt;/td&gt;
+ &lt;td&gt;
+&lt;p&gt;1. &lt;font face=&quot;arial,helvetica,sans-serif&quot;&gt;&lt;b&gt;EM-Cube: Cube-shaped, Self-Reconfigurable Robots Sliding on Structure Surface&lt;/b&gt;&lt;br /&gt;&lt;/font&gt;&lt;font face=&quot;arial,helvetica,sans-serif&quot;&gt;&lt;u&gt;Byoungkwon An&lt;/u&gt; &lt;br /&gt;IEEE International Conference on Robotics and Automation (ICRA), Pasadena, CA, 2008, [&lt;a href=&quot;http://people.csail.mit.edu/dran/paper/An2008icra.pdf&quot; target=&quot;_blank&quot;&gt;pdf&lt;/a&gt;] [&lt;a href=&quot;http://youtu.be/ObCGQW_MBGs&quot; target=&quot;_blank&quot;&gt;video1&lt;/a&gt;] [&lt;a href=&quot;http://youtu.be/nd18BOjUgss&quot; target=&quot;_blank&quot;&gt;video2&lt;/a&gt;]&lt;/font&gt;&lt;/p&gt;
+ &lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+
+&lt;br /&gt;
+&lt;font face=&quot;arial,helvetica,sans-serif&quot; size=&quot;4&quot;&gt;&lt;b&gt;Thesis&lt;/b&gt;&lt;a name=&quot;thesis&quot;&gt; &lt;/a&gt;
+ &lt;/font&gt;
+&lt;br /&gt;
+
+&lt;p&gt;&lt;font face=&quot;arial,helvetica,sans-serif&quot;&gt;&lt;b&gt;Sticker Controller and Sticker Programming for Smart Sheets (Self-Folding Sheets)&lt;/b&gt;&lt;br /&gt;&lt;/font&gt;&lt;font face=&quot;arial,helvetica,sans-serif&quot;&gt;Master of Science, Computer Science, MIT, 2011&lt;/font&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;font face=&quot;arial,helvetica,sans-serif&quot;&gt;&lt;b&gt;Scaling of Dynamic Surface Growth Model on Fractal Dimension&lt;/b&gt;&lt;br /&gt;&lt;/font&gt;&lt;font face=&quot;arial,helvetica,sans-serif&quot;&gt;Bachelor of Science, Physics, Soongsil University, 2004&lt;/font&gt;&lt;/p&gt;
+
+&lt;br /&gt;
+&lt;font face=&quot;arial,helvetica,sans-serif&quot;&gt;&lt;b&gt;&lt;font size=&quot;4&quot;&gt;Patent &lt;/font&gt;&lt;/b&gt;&lt;a name=&quot;patent&quot;&gt; &lt;/a&gt;&lt;/font&gt;
+&lt;br /&gt;
+
+&lt;table border=&quot;0&quot;&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+ &lt;td&gt;
+&lt;div class=&quot;imageblock left&quot; style=&quot;float: left; margin-right: 10px;&quot;&gt;&lt;img src=&quot;http://drancom.com/attach/1/8094853549.jpg&quot; width=&quot;80&quot; height=&quot;65&quot; alt=&quot;User inserted image&quot; /&gt;&lt;/div&gt;
+ &lt;/td&gt;
+ &lt;td&gt;
+&lt;p&gt;
+&lt;font face=&quot;arial,helvetica,sans-serif&quot;&gt;&lt;b&gt;FET (Field Effect Transistor) Nerve Electronic Chip&lt;/b&gt;&lt;/font&gt;
+&lt;font face=&quot;arial,helvetica,sans-serif&quot;&gt;,10-0765960, KR&lt;/font&gt;
+&lt;u&gt;&lt;font face=&quot;arial,helvetica,sans-serif&quot;&gt;Byoungkwon An&lt;/font&gt;&lt;/u&gt;
+&lt;/p&gt;
+ &lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;br /&gt;&lt;br /&gt;
+ &lt;font face=&quot;arial,helvetica,sans-serif&quot; size=&quot;4&quot;&gt;&lt;b&gt;Media Coverage (Selected)&lt;/b&gt; &lt;a name=&quot;media&quot;&gt; &lt;/a&gt;
+ &lt;/font&gt;
+&lt;br /&gt;
+&lt;p&gt;&lt;font face=&quot;arial,helvetica,sans-serif&quot;&gt;&lt;b&gt;MIT Main Page&lt;/b&gt;, Bake Your Own Robot, May 30, 2014 [&lt;a href=&quot;http://people.csail.mit.edu/dran/media/An2014icra_mitmain.jpg&quot; target=&quot;_blank&quot;&gt;link&lt;/a&gt;]&lt;/font&gt;&lt;/p&gt;&lt;/font&gt;&lt;font color=&quot;#000&amp;quot;&quot;&gt;
+&lt;/font&gt;&lt;p&gt;&lt;font face=&quot;arial,helvetica,sans-serif&quot;&gt;&lt;b&gt;MIT News&lt;/b&gt;, Bake Your Own Robot, May 30, 2014 [&lt;a href=&quot;http://newsoffice.mit.edu/2014/bake-your-own-robot-0530&quot; target=&quot;_blank&quot;&gt;link&lt;/a&gt;]&lt;/font&gt;&lt;/p&gt;&lt;p&gt;&lt;font color=&quot;#000&amp;quot;&quot;&gt;&lt;font face=&quot;arial,helvetica,sans-serif&quot;&gt;&lt;b&gt;NBC News&lt;/b&gt;, Right Out of the Oven: MIT Scientists Bake Self-Building Origami Robots, May 30, 2014 [&lt;a href=&quot;http://www.nbcnews.com/tech/innovation/right-out-oven-mit-scientists-bake-self-building-origami-robots-n118631&quot; target=&quot;_blank&quot;&gt;link&lt;/a&gt;]&lt;/font&gt;&lt;/font&gt;&lt;/p&gt;&lt;font color=&quot;#000&amp;quot;&quot;&gt;&lt;p&gt;&lt;font face=&quot;arial,helvetica,sans-serif&quot;&gt;&lt;b&gt;Science Daily&lt;/b&gt;, New printable robots could self-assemble when heated, May 30, 2014 [&lt;a href=&quot;http://www.sciencedaily.com/releases/2014/05/140530124420.htm&quot; target=&quot;_blank&quot;&gt;link&lt;/a&gt;]&lt;/font&gt;&lt;/p&gt;&lt;/font&gt;&lt;font color=&quot;#000&amp;quot;&quot;&gt;
+&lt;p&gt;&lt;font face=&quot;arial,helvetica,sans-serif&quot;&gt;&lt;b&gt;R&amp;amp;D Magazine&lt;/b&gt;, Bake &lt;font color=&quot;#000&amp;quot;&quot;&gt;y&lt;/font&gt;our &lt;font color=&quot;#000&amp;quot;&quot;&gt;o&lt;/font&gt;wn &lt;font color=&quot;#000&amp;quot;&quot;&gt;r&lt;/font&gt;obot, May 30, 2014 [&lt;a href=&quot;http://www.rdmag.com/videos/2014/05/bake-your-own-robot&quot; target=&quot;_blank&quot;&gt;link&lt;/a&gt;]&lt;/font&gt;&lt;/p&gt;&lt;/font&gt;&lt;p&gt;&lt;font face=&quot;arial,helvetica,sans-serif&quot;&gt;&lt;b&gt;CTV News&lt;/b&gt;, MIT designs &#039;bake-your-own&#039; robots, June 7, 2014 [&lt;a href=&quot;http://www.ctvnews.ca/sci-tech/mit-designs-bake-your-own-robots-1.1857880&quot; target=&quot;_blank&quot;&gt;link&lt;/a&gt;]&lt;/font&gt;&lt;/p&gt;
+&lt;p&gt;&lt;font color=&quot;#000&amp;quot;&quot;&gt;&lt;p&gt;&lt;font color=&quot;#000&amp;quot;&quot;&gt;&lt;font face=&quot;arial,helvetica,sans-serif&quot;&gt;&lt;b&gt;CNN&lt;/b&gt;, Edge of Discovery, Transformers could be a reality!, June 1, 2011&lt;/font&gt;&lt;/font&gt;&lt;/p&gt;&lt;p&gt;&lt;font color=&quot;#000&amp;quot;&quot;&gt;&lt;font face=&quot;arial,helvetica,sans-serif&quot;&gt;&lt;br /&gt;&lt;/font&gt;&lt;/font&gt;&lt;/p&gt;&lt;/font&gt;&lt;/p&gt;&lt;font color=&quot;#000&amp;quot;&quot;&gt;&lt;p&gt;&lt;font face=&quot;arial,helvetica,sans-serif&quot;&gt;&lt;b&gt;MIT Main Page,&lt;/b&gt; Shape-shifting robots, August 4, 2010&lt;/font&gt;
+[&lt;a href=&quot;http://people.csail.mit.edu/dran/media/An2010pnas_mitmain.pdf&quot; target=&quot;_blank&quot;&gt;link&lt;/a&gt;]&lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;font color=&quot;#000&amp;quot;&quot;&gt;&lt;font face=&quot;arial,helvetica,sans-serif&quot;&gt;&lt;b&gt;MIT News&lt;/b&gt;, Shape-shifting robots, August 4, 2010&lt;/font&gt;&lt;br /&gt;&lt;/font&gt;&lt;/p&gt;&lt;p&gt;&lt;font color=&quot;#000&amp;quot;&quot;&gt;&lt;/font&gt;&lt;/p&gt;&lt;/font&gt;&lt;font color=&quot;#000&amp;quot;&quot;&gt;&lt;p&gt;&lt;font face=&quot;arial,helvetica,sans-serif&quot;&gt;&lt;b&gt;MSNBC&lt;/b&gt;, &#039;Programmable matter&#039; may shape future tools, June 28, 2010&lt;/font&gt;&lt;/p&gt;&lt;/font&gt;&lt;font face=&quot;arial,helvetica,sans-serif&quot;&gt;&lt;b&gt;Nature News&lt;/b&gt;, Origami that folds itself, June 28, 2010&lt;/font&gt;
+&lt;font color=&quot;#000&amp;quot;&quot;&gt;
+&lt;p&gt;&lt;font face=&quot;arial,helvetica,sans-serif&quot;&gt;&lt;b&gt;Discovery News&lt;/b&gt;, Origami Robot Makes Shapes on Demand, July 7, 2010&lt;/font&gt;&lt;/p&gt;
+&lt;p&gt;&lt;font face=&quot;arial,helvetica,sans-serif&quot;&gt;&lt;b&gt;CNET&lt;/b&gt;, Robotics meet origami in self-folding sheets, June 29, 2010&lt;/font&gt;&lt;/p&gt;&lt;/font&gt;&lt;font color=&quot;#000&amp;quot;&quot;&gt;
+&lt;p&gt;&lt;font face=&quot;arial,helvetica,sans-serif&quot;&gt;&lt;b&gt;Scientific American&lt;/b&gt;, Shifty Science: Programmable Matter Takes Shape with Self-Folding Origami Sheets, June 28, 2010&lt;/font&gt;&lt;/p&gt;
+&lt;p&gt;&lt;font face=&quot;arial,helvetica,sans-serif&quot;&gt;&lt;b&gt;Popular Science&lt;/b&gt;, Video: &quot;Smart Sheets&quot; Can Self-Assemble Into Airplanes, Boats, June 28, 2010&lt;/font&gt;&lt;/p&gt;
+&lt;p&gt;&lt;font face=&quot;arial,helvetica,sans-serif&quot;&gt;&lt;b&gt;Phys.org&lt;/b&gt;, Shape-shifting sheets automatically fold into multiple shapes, June 28, 2010&lt;br /&gt;&lt;/font&gt;&lt;/p&gt;
+&lt;p&gt;&lt;font face=&quot;arial,helvetica,sans-serif&quot;&gt;&lt;b&gt;Harvard Gazette&lt;/b&gt;, Shape-shifting sheets automatically fold into multiple shapes, June 28, 2010&lt;/font&gt;&lt;/p&gt;
+&lt;/font&gt;</description>
+			<category>Byoungkwon (Kwon) An</category>
+			<author> (Byoungkwon An)</author>
+			<guid>http://drancom.com/1</guid>
+			<comments>http://drancom.com/entry/Byoungkwon-An-Kwon-An#entry1comment</comments>
+			<pubDate>Thu, 20 Dec 2012 05:55:22 -0500</pubDate>
+		</item>
+		<item>
+			<title>Distributed Computing for Self-Assembling Modular System</title>
+			<link>http://drancom.com/entry/Distributed-Computing-for-Self-Assembling-Modular-System</link>
+			<description>&lt;font size=&quot;3&quot;&gt;&lt;b&gt;Distributed Computing for Self-Assembling Modular System&lt;/b&gt;&lt;/font&gt;&lt;br /&gt;&lt;font size=&quot;2&quot;&gt;&lt;br /&gt;&lt;font size=&quot;2&quot;&gt;&lt;b&gt;Table of Contents&lt;/b&gt;&lt;/font&gt;&lt;/font&gt;&lt;br /&gt;1. Self-Assembling Modular System&lt;br /&gt;2. Distributed Shape Magnification Algorithms&lt;br /&gt;3. Processor Architecture for Self-Assembling Modular Systems (Current)&lt;br /&gt;4. Theoretical Computation Machine for Processor of Self-Assembling Modular Systems (Current)&lt;br /&gt;5. References&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;1. Self-Assembling Modular System&lt;br /&gt;A self-assembling modular system is a distributed system composed of many robotic modules. By attaching selected modules to the neihbor modules, the system assembles a object shape itself. . Each robotic module contains connecters to attach the selected neighborhood modules as well as a micro-processor to communicatate with the neighborhood modules and to control the connecters. Smart pabble robots [2] or Miche [3] are the examples of self-assembling modular systems.&lt;br /&gt;&lt;br /&gt;Video 1, 2: Example of self-assembling modular systems. Smart pabble robots [4,2].&lt;br /&gt;
+
+
+
+
+&lt;iframe src=&quot;http://www.youtube.com/embed/3wShKl0Hbw0&quot; allowfullscreen=&quot;&quot; frameborder=&quot;0&quot; height=&quot;280&quot; width=&quot;500&quot;&gt;&lt;/iframe&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;2. Distributed Shape Magnification Algorithms [1]&lt;br /&gt;&lt;br /&gt;A distributed shape magnification algorithm is a distributed algorithm that parallelly controls a self-assembling modular system to connect the selected modules for the given target objects [1]. Each module does not have any inforamtion of its id and location. Although each module just locally repeats the algorithm when it receives the messages, the whole system complites assembling the target objects. (Video 3).&lt;br /&gt;&lt;br /&gt;Details of the algorithms, proofs and simulation resultes are explained in [1]. A example of magnification of &quot;h&quot; shape is shown as in Fig. 4, 5.&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;Video 3: Simulation of Making Shape by Distrubuted Shape Magnificaiton Algorithm [1]&lt;br /&gt;
+
+&lt;br /&gt;&lt;object classid=&quot;clsid:d27cdb6e-ae6d-11cf-96b8-444553540000&quot; codebase=&quot;http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,0,0&quot; width=&quot;400&quot; height=&quot;300&quot;&gt;&lt;param name=&quot;wmode&quot; value=&quot;transparent&quot;/&gt;&lt;param name=&quot;movie&quot; value=&quot;&lt;iframe src=&quot;http://www.youtube.com/embed/u7Tf_ohHoFM&quot; allowfullscreen=&quot;&quot; frameborder=&quot;0&quot; height=&quot;315&quot; width=&quot;420&quot;&gt;&lt;/iframe&gt;&quot;/&gt;&lt;!--[if !IE]&gt; &lt;--&gt;&lt;object type=&quot;application/x-shockwave-flash&quot; transparent=&quot;yes&quot; data=&quot;&lt;iframe src=&quot;http://www.youtube.com/embed/u7Tf_ohHoFM&quot; allowfullscreen=&quot;&quot; frameborder=&quot;0&quot; height=&quot;315&quot; width=&quot;420&quot;&gt;&lt;/iframe&gt;&quot; width=&quot;400&quot; height=&quot;300&quot;&gt;&lt;p&gt;&lt;a href=&quot;&lt;iframe src=&quot;http://www.youtube.com/embed/u7Tf_ohHoFM&quot; allowfullscreen=&quot;&quot; frameborder=&quot;0&quot; height=&quot;315&quot; width=&quot;420&quot;&gt;&lt;/iframe&gt;&quot;&gt;[Flash] &lt;iframe src=&quot;http://www.youtube.com/embed/u7Tf_ohHoFM&quot; allowfullscreen=&quot;&quot; frameborder=&quot;0&quot; height=&quot;315&quot; width=&quot;420&quot;&gt;&lt;/iframe&gt;&lt;/a&gt;&lt;/p&gt;&lt;/object&gt;&lt;!--&gt; &lt;![endif]--&gt;&lt;/object&gt;&lt;br /&gt;&lt;br /&gt;Fig. 4. Example of input &quot;h&quot; shape coordinates into the seed module [1].&lt;br /&gt;alg_input&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;Fig. 5. An example of magnification &quot;h&quot; shape in 2D. Magnification factors are 1, 2, and 3 from left to right figures. Top figures are the self-assembling modules in the bag. Bottom figures are the connected the modules which is the magnified desired shape. The red module is the seed module. The modules on green are marked itself as internal connecting module. The modules on blue are disconnecting modules.&lt;br /&gt;alg_mag&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;3. Processor Architecture for Self-Assembling Modular Systems (Current)&lt;br /&gt;We explore the processor of each modula to understand the minimum requriements of the instruction set and the registors for the algorithms. We built and proved a main algorithm and its extention algorithms for 3D self-assembling system. An ISA(instruction set architecture) composed of 5 registors, 5 instructions with no jump instruction can run the main algorithm. We are designing the logic layer of this ISA, to miximize the parallal computation of each processor.&lt;br /&gt;&lt;br /&gt;4. Theoretical Computation Machine for Processor of Self-Assembling Modular Systems (Current)&lt;br /&gt;We explore the computation in theoretical level by designing and analyzing 2D-tape distributed-head turing machine. Although the machine contains 7-tuple like a turning machine, it contains a different tape movement and a transition function for parallel computation.&lt;br /&gt;&lt;br /&gt;5. References&lt;br /&gt;[1] An, B., Rus, D., Making Shapes from Modules by Magnification, IEEE/RSJ International Conference on Intelligent Robots and System (IROS), 2010, url&lt;br /&gt;[2] Gilpin, K., Rus, D., A Distributed Algorithm for 2D Shape Duplication with Smart Pebble Robots, IEEE International Conference on Robotics and Automation (ICRA), 2012&lt;br /&gt;[3] Gilpin, K., Kotay, K., Rus, D., V. Iuliu, Miche: Modular Shape Formation by Self-Disassembly, The International Journal of Robotics Research, 27(3-4):345-372, 2008&lt;br /&gt;[4] http://newsdirect.nma.com.tw/SingleItem.aspx?asset_id=OEM_20120408_OINT_002</description>
+			<author> (Byoungkwon An)</author>
+			<guid>http://drancom.com/6</guid>
+			<comments>http://drancom.com/entry/Distributed-Computing-for-Self-Assembling-Modular-System#entry6comment</comments>
+			<pubDate>Thu, 20 Dec 2012 05:54:06 -0500</pubDate>
+		</item>
+		<item>
+			<title>Cube-shape Generic Distributed Self-Reconfigurable Robots</title>
+			<link>http://drancom.com/entry/Project01-01</link>
+			<description>&lt;p&gt;&lt;font size=&quot;5&quot;&gt;&lt;font color=&quot;#000000&quot;&gt;&lt;font color=&quot;#000000&quot;&gt;&lt;strong&gt;Cube-shape Self-Reconfigurable Robots&lt;/strong&gt;&lt;/font&gt;&lt;a href=&quot;http://drancom.com/0_bkan_1_cube-shaped_robots.pdf&quot; target=&quot;_blank&quot;&gt;&lt;br /&gt;&lt;font color=&quot;#0000ff&quot; size=&quot;3&quot;&gt;&lt;strong&gt;Description for project, pdf&lt;/strong&gt;&lt;/font&gt; &lt;/a&gt;&lt;/font&gt;&lt;/font&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;a name=&quot;em-cube3&quot;&gt;&lt;br /&gt;&lt;font color=&quot;#000000&quot;&gt;&lt;font size=&quot;6&quot;&gt;&lt;strong&gt;&amp;lt; EM-Cube 3 &amp;gt; &lt;br /&gt;&lt;/strong&gt;&lt;/font&gt;&lt;iframe width=&quot;420&quot; height=&quot;315&quot; src=&quot;http://www.youtube.com/embed/ObCGQW_MBGs&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;&lt;br /&gt;&lt;/font&gt;&lt;font size=&quot;6&quot;&gt;&lt;font size=&quot;3&quot;&gt;&lt;font color=&quot;#0000ff&quot;&gt;&lt;u&gt;&lt;div class=&quot;imageblock left&quot; style=&quot;float: left; margin-right: 10px;&quot;&gt;&lt;img src=&quot;http://drancom.com/attach/1/9363951037.jpg&quot; width=&quot;500&quot; height=&quot;371&quot; alt=&quot;EM-Cube 3&quot; /&gt;&lt;/div&gt;&lt;br /&gt;&lt;/u&gt;&lt;/font&gt;&lt;/font&gt;&lt;/font&gt;&lt;/a&gt;&lt;font size=&quot;6&quot;&gt;&lt;font size=&quot;3&quot;&gt;&lt;font color=&quot;#0000ff&quot;&gt;&lt;font color=&quot;#0000ff&quot; size=&quot;3&quot;&gt;&lt;strong&gt;&lt;a href=&quot;http://drancom.com/0_bkan_1_cube-shaped_robots.pdf&quot; target=&quot;_blank&quot;&gt;&lt;font color=&quot;#0000ff&quot; size=&quot;3&quot;&gt;&lt;strong&gt;Description for project, pdf&lt;/strong&gt;&lt;/font&gt;&lt;/a&gt;&lt;u&gt;&lt;font size=&quot;5&quot;&gt; &lt;br /&gt;&lt;/font&gt;&lt;br /&gt;&lt;div class=&quot;imageblock left&quot; style=&quot;float: left; margin-right: 10px;&quot;&gt;&lt;img src=&quot;http://drancom.com/attach/1/2648339610.jpg&quot; width=&quot;250&quot; height=&quot;167&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/u&gt;&lt;/strong&gt;&lt;/font&gt;&lt;br /&gt;&lt;br /&gt;&lt;font size=&quot;4&quot;&gt;&lt;font color=&quot;#0000ff&quot;&gt;&lt;strong&gt;&lt;font size=&quot;4&quot;&gt;&lt;font color=&quot;#0000ff&quot;&gt;&lt;strong&gt;Locomotion video &lt;/strong&gt;&lt;/font&gt;&lt;/font&gt;&lt;a href=&quot;http://www.drancom.com/video/0_bkan_emcu_loc.avi&quot; target=&quot;_blank&quot;&gt;(400kb,DivX)&lt;/a&gt;&lt;br /&gt;&lt;/strong&gt;&lt;/font&gt;&lt;/font&gt;&lt;br /&gt;&lt;a name=&quot;tf-series&quot;&gt;&lt;br /&gt;&lt;/a&gt;&lt;/font&gt;&lt;/font&gt;&lt;/font&gt;&lt;/p&gt;&lt;a name=&quot;tf-series&quot;&gt;
+&lt;/a&gt;&lt;p&gt;&lt;a name=&quot;tf-series&quot;&gt;&lt;font size=&quot;6&quot;&gt;&lt;font color=&quot;#000000&quot;&gt;&lt;strong&gt;&amp;lt; Microscale TF series &amp;gt;&lt;/strong&gt;&lt;/font&gt;&lt;/font&gt;&lt;br /&gt;&lt;br /&gt;&lt;font color=&quot;#000000&quot;&gt;&lt;div class=&quot;imageblock left&quot; style=&quot;float: left; margin-right: 10px;&quot;&gt;&lt;img src=&quot;http://drancom.com/attach/1/4577474405.jpg&quot; width=&quot;500&quot; height=&quot;370&quot; alt=&quot;TR-series&quot; /&gt;&lt;/div&gt;&lt;br /&gt;&lt;u&gt;&lt;font size=&quot;3&quot;&gt;&lt;font color=&quot;#0000ff&quot;&gt;&lt;br /&gt;&lt;/font&gt;&lt;/font&gt;&lt;/u&gt;&lt;/font&gt;&lt;/a&gt;&lt;font color=&quot;#000000&quot;&gt;&lt;u&gt;&lt;font size=&quot;3&quot;&gt;&lt;font color=&quot;#0000ff&quot;&gt;&lt;font color=&quot;#0000ff&quot; size=&quot;3&quot;&gt;&lt;strong&gt;&lt;a href=&quot;http://drancom.com/0_bkan_1_cube-shaped_robots.pdf&quot; target=&quot;_blank&quot;&gt;&lt;font color=&quot;#0000ff&quot; size=&quot;3&quot;&gt;&lt;strong&gt;Description for project, pdf&lt;/strong&gt;&lt;/font&gt;&lt;font size=&quot;5&quot;&gt; &lt;/font&gt;&lt;br /&gt;&lt;/a&gt;&lt;/strong&gt;&lt;/font&gt;&lt;br /&gt;&lt;/font&gt;&lt;/font&gt;&lt;/u&gt;&lt;br /&gt;&lt;br /&gt;&lt;a name=&quot;me-cube2&quot;&gt;&lt;br /&gt;&lt;strong&gt;&lt;font size=&quot;6&quot;&gt;&amp;lt;ME-Cube 2&amp;gt;&lt;/font&gt;&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;&lt;div class=&quot;imageblock left&quot; style=&quot;float: left; margin-right: 10px;&quot;&gt;&lt;img src=&quot;http://drancom.com/attach/1/2164107944.jpg&quot; width=&quot;500&quot; height=&quot;343&quot; alt=&quot;ME-Cube 2&quot; /&gt;&lt;/div&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/a&gt;&lt;u&gt;&lt;font color=&quot;#0000ff&quot;&gt;&lt;font size=&quot;3&quot;&gt;&lt;strong&gt;&lt;a href=&quot;http://drancom.com/0_bkan_1_cube-shaped_robots.pdf&quot; target=&quot;_blank&quot;&gt;&lt;u&gt;&lt;font color=&quot;#0000ff&quot;&gt;&lt;font size=&quot;3&quot;&gt;&lt;strong&gt;Description for project, pdf&lt;/strong&gt;&lt;/font&gt;&lt;font size=&quot;5&quot;&gt; &lt;/font&gt;&lt;/font&gt;&lt;/u&gt;&lt;br /&gt;&lt;/a&gt;&lt;/strong&gt;&lt;/font&gt;&lt;/font&gt;&lt;/u&gt;&lt;br /&gt;&lt;a name=&quot;em-cube1&quot;&gt;&lt;br /&gt;&lt;strong&gt;&lt;font size=&quot;6&quot;&gt;&amp;lt;EM-Cube 1&amp;gt;&lt;/font&gt;&lt;/strong&gt;&lt;/a&gt;&lt;/font&gt;&lt;/p&gt;&lt;a name=&quot;em-cube1&quot;&gt;&lt;div class=&quot;imageblock left&quot; style=&quot;float: left; margin-right: 10px;&quot;&gt;&lt;img src=&quot;http://drancom.com/attach/1/6819513089.jpg&quot; width=&quot;500&quot; height=&quot;379&quot; alt=&quot;EM-Cube 1&quot; /&gt;&lt;/div&gt;&lt;br /&gt;&lt;br /&gt;&lt;/a&gt;&lt;u&gt;&lt;font color=&quot;#0000ff&quot;&gt;&lt;font size=&quot;3&quot;&gt;&lt;strong&gt;&lt;a href=&quot;http://drancom.com/0_bkan_1_cube-shaped_robots.pdf&quot; target=&quot;_blank&quot;&gt;&lt;u&gt;&lt;font color=&quot;#0000ff&quot;&gt;&lt;font size=&quot;3&quot;&gt;&lt;strong&gt;Description for project, pdf&lt;/strong&gt;&lt;/font&gt;&lt;font size=&quot;5&quot;&gt; &lt;/font&gt;&lt;/font&gt;&lt;/u&gt;&lt;br /&gt;&lt;/a&gt;&lt;/strong&gt;&lt;/font&gt;&lt;/font&gt;&lt;/u&gt;&lt;br /&gt;&lt;br /&gt;
+&lt;div style=&quot;TEXT-ALIGN: right&quot;&gt;(last updated : 2007. 07. 28)&lt;/div&gt;</description>
+			<category>Projects</category>
+			<author> (Byoungkwon An)</author>
+			<guid>http://drancom.com/3</guid>
+			<comments>http://drancom.com/entry/Project01-01#entry3comment</comments>
+			<pubDate>Sat, 30 Dec 2006 11:47:12 -0500</pubDate>
+		</item>
+		<item>
+			<title>Distributed-Table-based (DTB) Artificial Nervous System</title>
+			<link>http://drancom.com/entry/Project02-01</link>
+			<description>&lt;STRONG&gt;&lt;FONT color=#000000 size=5&gt;Distributed-Table-based (DTB) &lt;br /&gt;Artificial Nervous System&lt;/FONT&gt;&lt;/STRONG&gt;&lt;A href=&quot;http://www.drancom.com/0_bkan_2_artificial_nervous_system.pdf&quot; target=_blank&gt;&lt;FONT color=#0000ff&gt;&lt;br /&gt;&lt;br /&gt;&lt;FONT size=4&gt;&lt;STRONG&gt;One-page Description (pdf)&lt;/STRONG&gt;&lt;/FONT&gt;&lt;/FONT&gt;&lt;FONT size=4&gt;&lt;STRONG&gt; &lt;/STRONG&gt;&lt;/FONT&gt;&lt;/A&gt;&lt;br /&gt;&lt;br /&gt;&lt;div class=&quot;imageblock left&quot; style=&quot;float: left; margin-right: 10px;&quot;&gt;&lt;img src=&quot;http://drancom.com/attach/1/3512165470.jpg&quot; width=&quot;500&quot; height=&quot;383&quot; alt=&quot;DTB Artificial Nervous System&quot; /&gt;&lt;/div&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
+&lt;DIV style=&quot;TEXT-ALIGN: right&quot;&gt;(last updated : 2007. 7. 28)&lt;/DIV&gt;</description>
+			<category>Projects</category>
+			<author> (Byoungkwon An)</author>
+			<guid>http://drancom.com/4</guid>
+			<comments>http://drancom.com/entry/Project02-01#entry4comment</comments>
+			<pubDate>Sat, 30 Dec 2006 11:47:02 -0500</pubDate>
+		</item>
+		<item>
+			<title>Field Effect Transistor Nerve-Computer Interface</title>
+			<link>http://drancom.com/entry/Project03-01</link>
+			<description>&lt;P&gt;&lt;FONT size=5&gt;&lt;STRONG&gt;&lt;FONT color=#000000&gt;Field Effect Transistor Nerve-Computer Interface&lt;/FONT&gt;&lt;br /&gt;&lt;/STRONG&gt;&lt;/FONT&gt;&lt;br /&gt;&lt;br /&gt;&lt;A href=&quot;http://www.drancom.com/0_bkan_3_nerve-computer_interface.pdf&quot; target=_blank&gt;&lt;FONT color=#0000ff size=3&gt;&lt;STRONG&gt;One-page Description, pdf&lt;/STRONG&gt;&lt;/FONT&gt;&lt;/A&gt;&lt;FONT size=3&gt;&lt;STRONG&gt; &lt;/STRONG&gt;&lt;/FONT&gt;&lt;/P&gt;
+&lt;P&gt;&lt;div class=&quot;imageblock left&quot; style=&quot;float: left; margin-right: 10px;&quot;&gt;&lt;img src=&quot;http://drancom.com/attach/1/8508201517.jpg&quot; width=&quot;500&quot; height=&quot;375&quot; alt=&quot;FET Nerve-Computer Interface&quot; /&gt;&lt;/div&gt;&lt;/P&gt;&lt;br /&gt;
+&lt;DIV style=&quot;TEXT-ALIGN: right&quot;&gt;(last updated: 2007. 7. 28)&lt;/DIV&gt;</description>
+			<category>Projects</category>
+			<author> (Byoungkwon An)</author>
+			<guid>http://drancom.com/5</guid>
+			<comments>http://drancom.com/entry/Project03-01#entry5comment</comments>
+			<pubDate>Sat, 30 Dec 2006 11:13:43 -0500</pubDate>
+		</item>
+	</channel>
+</rss>
