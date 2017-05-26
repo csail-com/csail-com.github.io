@@ -1,4 +1,0 @@
-
-
-# Drancom Computer Science
-## Hello 
