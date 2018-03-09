@@ -1,3 +1,5 @@
-*
-!*.tex
-!*.html
+*.aux
+*.log
+*.out
+*.gz
+*.pdf
