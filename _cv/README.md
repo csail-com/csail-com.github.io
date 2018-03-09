@@ -6,7 +6,7 @@
 ## Contents tex 
 - cv-contents.tex : Shared with both master file.
 
-## Process of Update CV 
+## How to deploy updated CV 
 - CV for web link: www.drancom.com/cv-kwon-an.pdf
 - To update, cv-kwon-an.pdf should be moved to the homepage's root dir. 
 - CV with Privite Contacts location github.com/drancom/drancom.github.io/_cv/cv-kwon-an-contacts.pdf
