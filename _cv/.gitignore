@@ -3,3 +3,6 @@
 *.out
 *.gz
 *.pdf
+*~
+*#
+!cv-kwon-an-contacts.pdf
