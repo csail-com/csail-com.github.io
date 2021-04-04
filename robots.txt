@@ -1,0 +1,7 @@
+#drancom.com Robots Exclusion Rules - Updated April 4, 2021
+
+User-agent: *
+
+Allow:/
+
+#Sitemap:https://www.drancom.com/.sitemap.xml
