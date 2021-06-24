@@ -234,167 +234,177 @@
       }
     </style>
     <script>
-      
-      let publications = [
-      {
-        img: 'tn/nc2019.jpg',
-        title: 'Complex wireframe DNA nanostructures from simple building blocks',
-        authors: 'Wen Wang, Silian Chen, <u>Byoungkwon An</u>, Kai Huang, Tanxi Bai, Mengyuan Xu, Gaëtan Bellot, Yonggang  Ke, Ye Xiang, Bryan Wei',
-        ref: 'Nature Communications, 10:1067, 2019',
-        pdf: 'paper/nc2019.pdf',
-        links: '[<a href="paper/nc2019.bib" target="_blank">bib</a>]',
-      }, 
-      { 
-        img: 'tn/bunny_ex1.jpg',
-        title: 'An End-to-End Approach to Self-Folding Origami Structures',
-        authors: '<u>Byoungkwon An</u>, Shuhei Miyashita, Aaron Ong, Michael T. Tolley, Martin L. Demaine, Erik D. Demaine, Robert J. Wood, Daniela Rus',
-        ref: 'IEEE Transactions on Robotics (T-RO), Page(s): 1409 - 1424, Volume: 34, Issue: 6, Dec. 2018',
-        pdf: 'paper/An2018tro.pdf',
-        links: `[<a href="https://youtu.be/HrQIdD1vzdE" target="_blank">video 1</a>]
-                [<a href="https://youtu.be/eDk_T992e4Q" target="_blank">video 2</a>]
-                [<a href="paper/An2018tro.bib" target="_blank">bib</a>]`,
-      },
-      {
-        img: 'paper/An2018chi/thermorh_02_270.jpg',
-        title: 'Thermorph: Democratizing 4D Printing of Self-Folding Materials and Interfaces',
-        authors: `<u>Byoungkwon An*</u>, Ye Tao*, Jianzhe Gu, Tingyu Cheng, Xiang 'Anthony' Chen, Xiaoxiao Zhang, Wei Zhao, Youngwook Do, Shigeo  Takahashi, Hsiang-Yun Wu, Teng Zhang, Lining Yao<br />
-                          (* indicates equal contribution)`,
-        ref: 'ACM CHI Conference on Human Factors in Computing Systems (CHI), Montreal, Quebec, Canada, 2018',
-        pdf: 'paper/An2018chi.pdf',
-        links: `[<a href="https://youtu.be/SyHKje62MQQ" target="_blank">video (30 sec)</a>]
-                [<a href="https://youtu.be/GawIRTDJ9Go" target="_blank">video (3 min)</a>]
-                [<a href="https://doi.acm.org/10.1145/3173574.3173834" target="_blank" rel="noopener">DOI</a>]
-                [<a href="paper/An2018chi.bib" target="_blank">bib</a>]`,
-      },
-      {
-        img: 'paper/ppa2018chi/paperActuator_02.jpg',
-        title: 'Printed Paper Actuator: A Low-cost Reversible Actuation and Sensing Method for Shape Changing Interfaces',
-        authors: 'Guanyun Wang*, Tingyu Cheng*, Youngwook Do, Humphrey Yang, Ye Tao, Jianzhe Gu, <u>Byoungkwon An</u>, Lining Yao',
-        ref: 'ACM CHI Conference on Human Factors in Computing Systems (CHI), Montreal, Quebec, Canada, 2018',
-        pdf: 'paper/ppa2018chi.pdf',
-        links: `[<a href="https://youtu.be/ApXD5SMuwoA" target="_blank">video (30 sec)</a>]
-                        [<a href="https://youtu.be/XW_pdM_BOEQ" target="_blank">video (3 min)</a>]
-                        [<a href="https://doi.org/10.1145/3173574.3174143" target="_blank" rel="noopener">DOI</a>]
-                        [<a href="paper/ppa2018chi.bib" target="_blank">bib</a>]`,
-      },
-      {
-        img: 'tn/satorigami_tn.jpg',
-        title: 'Computing 3SAT on a Fold-and-Cut Machine',
-        authors: '<u>Byoungkwon An</u>, Erik D. Demaine, Martin L. Demaine, Jason S. Ku', 
-        ref: 'Canadian Conference on Computational Geometry (CCCG), Ottawa, Ontario, Canada, 2017',
-        pdf: 'paper/An2017cccg.pdf',
-      },
-      {
-        img: 'tn/sci2017ssdna_tn.jpg',
-        title: 'Single-Stranded DNA and RNA Origami',
-        authors: `Dongran Han+, Xiaodong Qi+, Cameron Myhrvold, Bei Wang, Mingjie Dai, Shuoxing Jiang, Maxwell Bates, Yan Liu, <u>Byoungkwon An*</u>, Fei Zhang*, Hao Yan*, Peng Yin*<br />
-                          (* indicates corresponding authors)<br />
-                          (+ indicates equal contribution)`,
-        ref: 'Science, Vol. 358, 2017',
-        pdf: 'paper/sci2017ssdna.pdf',
-        links: '[<a href="https://doi.org/10.1126/science.aao2648" target="_blank">DOI</a>]',
-      },
-      {
-        img: 'tn/An2016fnano.jpg',
-        title: 'Computational Design and Self-Assembly for Single Stranded DNA Origami',
-        authors: '<u>Byoungkwon An</u>, Dongran Han, Maxwell Bates, Wei Zhao, Mingqiu Wang, Malte Tinnus,Michael Zyracki, Merry Shiyu Wang, Peng Yin',
-        ref: 'Foundations of Nanoscience: Self-Assembled Architectures and Devices (FNANO), 2016, abstract, selected oral presentation',
-      }, 
-      {
-        img: 'tn/propellers_1.jpg',
-        title: 'Folding Angle Regulation by Curved Crease Design for Self-Assembling Origami Propellers',
-        authors: 'Shuhei Miyashita, Isabella DiDio, Ishwarya Ananthabhotla, <u>Byoungkwon An</u>, Cynthia Sung, Slava Arabagi, Daniela Rus',
-        ref: 'Journal of Mechanisms and Robotics, 2015',
-        pdf: 'paper/miy2015jmr.pdf',
-      },
-      {
-        img: 'tn/pouchmotor_1.jpg',
-        title: 'Pouch Motors: Printable Soft Actuators Integrated with Computational Design',
-        authors: 'Ryuma Niiyama, Xu Sun, Cynthia Sung, <u>Byoungkwon An</u>, Daniela Rus, Sangbae Kim',
-        ref: 'Soft Robotics, 2015',
-        pdf: 'paper/niiyama2015.pdf',
-      },
-      {
-        img: 'tn/mcdonalds.jpg',
-        title: 'Looking Beyond the Visible Scene',
-        authors: `Aditya Khosla*, <u>Byoungkwon An*</u>, Joseph J. Lim*, Antonio Torralba<br />
-                        (* indicates equal contribution)`,
-        ref: 'IEEE International Conference on Computer Vision and Pattern Recognition (CVPR), Columbus, Ohio, USA, 2014',
-        pdf: 'paper/An2014cvpr.pdf', 
-      },
-      {
-        img: 'tn/bunny_egg.jpg',
-        title: 'An End-to-End Approach to Making Self-Folded 3D Surface Shapes by Uniform Heating',
-        authors: '<u>Byoungkwon An</u>, Shuhei Miyashita, Michael T. Tolley, Daniel M. Aukes, Laura Meeker, Erik D. Demaine, Martin L. Demaine, Robert J. Wood, Daniela Rus',
-        ref: 'IEEE International Conference on Robotics and Automation (ICRA), Hong Kong, China, 2014',
-        pdf: 'paper/An2014icra.pdf', 
-        links: '[<a href="https://youtu.be/NtBAKb_zmTs" target="_blank">video</a>]',
-      },
-      {
-        img: 'tn/dpsf1.jpg',
-        title: 'Designing and Programming Self-Folding Sheets',
-        authors: '<u>Byoungkwon An</u>, Daniela Rus',
-        ref: 'Robotics and Autonomous Systems, 2014',
-        pdf: 'paper/An2014ras.pdf',
-        links: '[<a href="https://youtu.be/E4-s3fkIBEM" target="_blank">video</a>]', 
-      },
-      {
-        img: 'tn/iser2014.jpg',
-        title: 'A Design Environment for the Rapid Specification and Fabrication of Printable Robots',
-        authors: 'Ankur Mehta, Nicola Bezzo, <u>Byoungkwon An</u>, Peter Gebhard, Vijay Kumar, Insup Lee, Daniela Rus',
-        ref: 'International Symposium on Experimental Robotics (ISER), Marrakech and Essaouira, Morocco, 2014',
-        pdf: 'paper/iser2014.pdf',
-      },
-      {
-        img: 'tn/dpsf3.jpg',
-        title: 'Programming and Controlling Self-Folding Robots',
-        authors: '<u>Byoungkwon An</u>, Daniela Rus',
-        ref: 'IEEE International Conference on Robotics and Automation (ICRA), St. Paul, Minnesota, USA, 2012',
-        pdf: 'paper/An2012icra.pdf',
-      },
-      {
-        img: 'tn/An2011rob.jpg',
-        title: 'Planning to Fold Multiple Objects from a Single Self-Folding Sheet',
-        authors: '<u>Byoungkwon An</u>, Nadia Benbernou, Erik Demaine, Daniela Rus',
-        ref: 'Robotica, 29(1): 87-102, 2011',
-        pdf: 'paper/An2011rob.pdf',
-      },
-      {
-        img: 'tn/oribot.jpg',
-        title: 'Robotic Origamis: Self-Morphing Modular Robots',
-        authors: 'Jamie Paik, <u>Byoungkwon An</u>, Daniela Rus, Robert Wood',
-        ref: 'International Conference on Morphological Computation (ICMC), Venice, Italy, 2011',
-        pdf: 'paper/PA2011icmc.pdf',
-      },
-      {
-        img: 'tn/pm1.jpg',
-        title: 'Programmable Matter by Folding',
-        authors: 'Elliot Hawkes, <u>Byoungkwon An</u>, Nadia Benbernou, Hiroto Tanaka, Sangbae Kim, Erik Demaine, Daniela Rus, Robert Wood',
-        ref: 'Proceedings of the National Academy of Sciences (PNAS), 107(28): 12441-12445, 2010',
-        pdf: 'paper/HA2010pnas.pdf',
-        links: '[<a href="https://youtu.be/vNhE25GgwDM" target="_blank">video</a>]',
-      },
-      {
-        img: 'tn/An2010iros.jpg',
-        title: 'Making Shapes from Modules by Magnification',
-        authors: '<u>Byoungkwon An</u>, Daniela Rus',
-        ref: 'IEEE/RSJ International Conference on Intelligent Robots and System (IROS), Taipei, Taiwan, 2010',
-        pdf: 'paper/An2010iros.pdf',
-        links: '[<a href="https://youtu.be/u7Tf_ohHoFM" target="_blank">video</a>]',
-      },
-      {
-        img: 'tn/An2008icra.jpg',
-        title: 'EM-Cube: Cube-shaped, Self-Reconfigurable Robots Sliding on Structure Surface',
-        authors: '<u>Byoungkwon An</u>',
-        ref: 'IEEE International Conference on Robotics and Automation (ICRA), Pasadena, CA, USA, 2008',
-        pdf: 'paper/An2008icra.pdf',
-        links: `[<a href="https://youtu.be/ObCGQW_MBGs" target="_blank">video1</a>] 
-                        [<a href="https://youtu.be/nd18BOjUgss" target="_blank">video2</a>]`,
-      },
+      let img_width = "100px"
+      let img_margin_right = "15px"
 
+      let publications = [
+        {
+          img: 'tn/nc2019.jpg',
+          title: 'Complex wireframe DNA nanostructures from simple building blocks',
+          authors: 'Wen Wang, Silian Chen, <u>Byoungkwon An</u>, Kai Huang, Tanxi Bai, Mengyuan Xu, Gaëtan Bellot, Yonggang  Ke, Ye Xiang, Bryan Wei',
+          ref: 'Nature Communications, 10:1067, 2019',
+          pdf: 'paper/nc2019.pdf',
+          links: [['bib', 'paper/nc2019.bib'],],
+        }, 
+        { 
+          img: 'tn/bunny_ex1.jpg',
+          title: 'An End-to-End Approach to Self-Folding Origami Structures',
+          authors: '<u>Byoungkwon An</u>, Shuhei Miyashita, Aaron Ong, Michael T. Tolley, Martin L. Demaine, Erik D. Demaine, Robert J. Wood, Daniela Rus',
+          ref: 'IEEE Transactions on Robotics (T-RO), Page(s): 1409 - 1424, Volume: 34, Issue: 6, Dec. 2018',
+          pdf: 'paper/An2018tro.pdf',
+          links: [['video 1', 'https://youtu.be/HrQIdD1vzdE'],
+                  ['video 2', 'https://youtu.be/eDk_T992e4Q'],
+                  ['bib', 'paper/An2018tro.bib'],],
+        },
+        {
+          img: 'paper/An2018chi/thermorh_02_270.jpg',
+          title: 'Thermorph: Democratizing 4D Printing of Self-Folding Materials and Interfaces',
+          authors: `<u>Byoungkwon An*</u>, Ye Tao*, Jianzhe Gu, Tingyu Cheng, Xiang 'Anthony' Chen, Xiaoxiao Zhang, Wei Zhao, Youngwook Do, Shigeo  Takahashi, Hsiang-Yun Wu, Teng Zhang, Lining Yao<br />
+                            (* indicates equal contribution)`,
+          ref: 'ACM CHI Conference on Human Factors in Computing Systems (CHI), Montreal, Quebec, Canada, 2018',
+          pdf: 'paper/An2018chi.pdf',
+          links: [['video (30 sec)', 'https://youtu.be/SyHKje62MQQ'],
+                  ['video (3 min)', 'https://youtu.be/GawIRTDJ9Go'],
+                  ['DOI', 'https://doi.acm.org/10.1145/3173574.3173834'],
+                  ['bib', 'paper/An2018chi.bib'],],
+        },
+        {
+          img: 'paper/ppa2018chi/paperActuator_02.jpg',
+          title: 'Printed Paper Actuator: A Low-cost Reversible Actuation and Sensing Method for Shape Changing Interfaces',
+          authors: 'Guanyun Wang*, Tingyu Cheng*, Youngwook Do, Humphrey Yang, Ye Tao, Jianzhe Gu, <u>Byoungkwon An</u>, Lining Yao',
+          ref: 'ACM CHI Conference on Human Factors in Computing Systems (CHI), Montreal, Quebec, Canada, 2018',
+          pdf: 'paper/ppa2018chi.pdf',
+          links: [['video (30 sec)', 'https://youtu.be/ApXD5SMuwoA'],
+                  ['video (3 min)', 'https://youtu.be/XW_pdM_BOEQ'],
+                  ['DOI','https://doi.org/10.1145/3173574.3174143'],
+                  ['bib', 'paper/ppa2018chi.bib'],],
+        },
+        {
+          img: 'tn/satorigami_tn.jpg',
+          title: 'Computing 3SAT on a Fold-and-Cut Machine',
+          authors: '<u>Byoungkwon An</u>, Erik D. Demaine, Martin L. Demaine, Jason S. Ku', 
+          ref: 'Canadian Conference on Computational Geometry (CCCG), Ottawa, Ontario, Canada, 2017',
+          pdf: 'paper/An2017cccg.pdf',
+        },
+        {
+          img: 'tn/sci2017ssdna_tn.jpg',
+          title: 'Single-Stranded DNA and RNA Origami',
+          authors: `Dongran Han+, Xiaodong Qi+, Cameron Myhrvold, Bei Wang, Mingjie Dai, Shuoxing Jiang, Maxwell Bates, Yan Liu, <u>Byoungkwon An*</u>, Fei Zhang*, Hao Yan*, Peng Yin*<br />
+                            (* indicates corresponding authors)<br />
+                            (+ indicates equal contribution)`,
+          ref: 'Science, Vol. 358, 2017',
+          pdf: 'paper/sci2017ssdna.pdf',
+          links: [['DOI', 'https://doi.org/10.1126/science.aao2648'],],
+        },
+        {
+          img: 'tn/An2016fnano.jpg',
+          title: 'Computational Design and Self-Assembly for Single Stranded DNA Origami',
+          authors: '<u>Byoungkwon An</u>, Dongran Han, Maxwell Bates, Wei Zhao, Mingqiu Wang, Malte Tinnus,Michael Zyracki, Merry Shiyu Wang, Peng Yin',
+          ref: 'Foundations of Nanoscience: Self-Assembled Architectures and Devices (FNANO), 2016, abstract, selected oral presentation',
+        }, 
+        {
+          img: 'tn/propellers_1.jpg',
+          title: 'Folding Angle Regulation by Curved Crease Design for Self-Assembling Origami Propellers',
+          authors: 'Shuhei Miyashita, Isabella DiDio, Ishwarya Ananthabhotla, <u>Byoungkwon An</u>, Cynthia Sung, Slava Arabagi, Daniela Rus',
+          ref: 'Journal of Mechanisms and Robotics, 2015',
+          pdf: 'paper/miy2015jmr.pdf',
+        },
+        {
+          img: 'tn/pouchmotor_1.jpg',
+          title: 'Pouch Motors: Printable Soft Actuators Integrated with Computational Design',
+          authors: 'Ryuma Niiyama, Xu Sun, Cynthia Sung, <u>Byoungkwon An</u>, Daniela Rus, Sangbae Kim',
+          ref: 'Soft Robotics, 2015',
+          pdf: 'paper/niiyama2015.pdf',
+        },
+        {
+          img: 'tn/mcdonalds.jpg',
+          title: 'Looking Beyond the Visible Scene',
+          authors: `Aditya Khosla*, <u>Byoungkwon An*</u>, Joseph J. Lim*, Antonio Torralba<br />
+                          (* indicates equal contribution)`,
+          ref: 'IEEE International Conference on Computer Vision and Pattern Recognition (CVPR), Columbus, Ohio, USA, 2014',
+          pdf: 'paper/An2014cvpr.pdf', 
+        },
+        {
+          img: 'tn/bunny_egg.jpg',
+          title: 'An End-to-End Approach to Making Self-Folded 3D Surface Shapes by Uniform Heating',
+          authors: '<u>Byoungkwon An</u>, Shuhei Miyashita, Michael T. Tolley, Daniel M. Aukes, Laura Meeker, Erik D. Demaine, Martin L. Demaine, Robert J. Wood, Daniela Rus',
+          ref: 'IEEE International Conference on Robotics and Automation (ICRA), Hong Kong, China, 2014',
+          pdf: 'paper/An2014icra.pdf', 
+          links: [['video','https://youtu.be/NtBAKb_zmTs'],],
+        },
+        {
+          img: 'tn/dpsf1.jpg',
+          title: 'Designing and Programming Self-Folding Sheets',
+          authors: '<u>Byoungkwon An</u>, Daniela Rus',
+          ref: 'Robotics and Autonomous Systems, 2014',
+          pdf: 'paper/An2014ras.pdf',
+          links: [['video', 'https://youtu.be/E4-s3fkIBEM'],], 
+        },
+        {
+          img: 'tn/iser2014.jpg',
+          title: 'A Design Environment for the Rapid Specification and Fabrication of Printable Robots',
+          authors: 'Ankur Mehta, Nicola Bezzo, <u>Byoungkwon An</u>, Peter Gebhard, Vijay Kumar, Insup Lee, Daniela Rus',
+          ref: 'International Symposium on Experimental Robotics (ISER), Marrakech and Essaouira, Morocco, 2014',
+          pdf: 'paper/iser2014.pdf',
+        },
+        {
+          img: 'tn/dpsf3.jpg',
+          title: 'Programming and Controlling Self-Folding Robots',
+          authors: '<u>Byoungkwon An</u>, Daniela Rus',
+          ref: 'IEEE International Conference on Robotics and Automation (ICRA), St. Paul, Minnesota, USA, 2012',
+          pdf: 'paper/An2012icra.pdf',
+        },
+        {
+          img: 'tn/An2011rob.jpg',
+          title: 'Planning to Fold Multiple Objects from a Single Self-Folding Sheet',
+          authors: '<u>Byoungkwon An</u>, Nadia Benbernou, Erik Demaine, Daniela Rus',
+          ref: 'Robotica, 29(1): 87-102, 2011',
+          pdf: 'paper/An2011rob.pdf',
+        },
+        {
+          img: 'tn/oribot.jpg',
+          title: 'Robotic Origamis: Self-Morphing Modular Robots',
+          authors: 'Jamie Paik, <u>Byoungkwon An</u>, Daniela Rus, Robert Wood',
+          ref: 'International Conference on Morphological Computation (ICMC), Venice, Italy, 2011',
+          pdf: 'paper/PA2011icmc.pdf',
+        },
+        {
+          img: 'tn/pm1.jpg',
+          title: 'Programmable Matter by Folding',
+          authors: 'Elliot Hawkes, <u>Byoungkwon An</u>, Nadia Benbernou, Hiroto Tanaka, Sangbae Kim, Erik Demaine, Daniela Rus, Robert Wood',
+          ref: 'Proceedings of the National Academy of Sciences (PNAS), 107(28): 12441-12445, 2010',
+          pdf: 'paper/HA2010pnas.pdf',
+          links: [['video', 'https://youtu.be/vNhE25GgwDM'],],
+        },
+        {
+          img: 'tn/An2010iros.jpg',
+          title: 'Making Shapes from Modules by Magnification',
+          authors: '<u>Byoungkwon An</u>, Daniela Rus',
+          ref: 'IEEE/RSJ International Conference on Intelligent Robots and System (IROS), Taipei, Taiwan, 2010',
+          pdf: 'paper/An2010iros.pdf',
+          links: [['video', 'https://youtu.be/u7Tf_ohHoFM'],],
+        },
+        {
+          img: 'tn/An2008icra.jpg',
+          title: 'EM-Cube: Cube-shaped, Self-Reconfigurable Robots Sliding on Structure Surface',
+          authors: '<u>Byoungkwon An</u>',
+          ref: 'IEEE International Conference on Robotics and Automation (ICRA), Pasadena, CA, USA, 2008',
+          pdf: 'paper/An2008icra.pdf',
+          links: [['video1', 'https://youtu.be/ObCGQW_MBGs'],
+                  ['video2', 'https://youtu.be/nd18BOjUgss'],], 
+        },
       ]
-      let img_width = "100"
-      let img_margin_right = "10px"
+
+      function linksToHtml(links) {
+        let ret=''
+        if (links) {
+          links.forEach( i => {
+            ret += ' [<a href="' + i[1] + '" target="_blank">' + i[0] + '</a>] '
+          })
+        }
+        return ret
+      }
+
       $(document).ready(() => {
 
         let str = `
@@ -413,13 +423,13 @@
                     </td>
                     <td>
                       <p class="lead fw-normal">
-                          `+ idx.toString() + `.
-                          <a ` + (i.pdf ? `href="` + i.pdf + `" target="_blank"` : '') + ` class="pub-a text-decoration-none"> 
+                          [`+ idx.toString() + `] 
+                          <a class="d-inline-flex align-items-center mb-2 link-dark text-decoration-none" ` + (i.pdf ? `href="` + i.pdf + `" target="_blank"` : '') + `> 
                           <b>` + i.title +`</b></a> <br />
                           ` + i.authors +`<br />
                           ` + i.ref + `<br/>
                         ` + (i.pdf ? `[<a href="` + i.pdf + `" target="_blank">pdf</a>]` : '') + `
-                        ` + (i.links ? i.links : '') + `
+                        ` + linksToHtml(i.links) + `
                       </p>
                     </td>
                   </tr>
@@ -431,8 +441,6 @@
               </table>`
         
         $("div#publications").html(str)
-        $(".pub-a").css("color", $("body").css("color"));
-        $(".pub-a:hover").css("color", $("body").css("color"));
       });
     </script>
   </head>
@@ -525,25 +533,6 @@
       </div>
 
       <div class="container masthead-followup px-4 px-md-3">
-        <!--section class="row mb-5 pb-md-4 align-items-center">
-          <div class="col">
-            <h2 class="display-5 fw-normal">Education</h2>
-            <p class="lead fw-normal">
-              <strong>Massachusetts Institute of Technology</strong>, Cambridge, MA, USA<br/>
-              S.M. in Computer Science, September 2011<br/>
-              Thesis: Sticker Controller and Programming for Smart Sheets (Self-Folding Sheets)<br/>
-              Advisor: Daniela Rus
-            </p>
-            <p class="lead fw-normal">
-              <strong>Soongsil University</strong>, Seoul, Korea<br/>
-              B.A. in Physics, February 2004<br/>
-              Thesis: Scaling of Dynamic Surface Growth Model on Fractal Dimension<br/>
-              Advisor: Jim Min Kim
-            </p>
-          </div>
-          <a name="publications"></a>
-        </section-->
-        
         <section class="row mb-5 pb-md-4 align-items-center" >
           <div class="col">
             <h2 class="display-5 fw-normal">Publications [<a href="https://scholar.google.com/citations?user=y1h7segAAAAJ&hl=en&oi=sra" target="_blank">Google Scholar</a>]</h2><a name="publications"></a>
