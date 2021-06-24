@@ -424,11 +424,11 @@
                     <td>
                       <p class="lead fw-normal">
                           [`+ idx.toString() + `] 
-                          <a class="d-inline-flex align-items-center mb-2 link-dark text-decoration-none" ` + (i.pdf ? `href="` + i.pdf + `" target="_blank"` : '') + `> 
+                          <a class="d-inline-flex align-items-center mb-2 link-dark text-decoration-none a-pub" ` + (i.pdf ? `href="` + i.pdf + `" target="_blank"` : '') + `> 
                           <b>` + i.title +`</b></a> <br />
                           ` + i.authors +`<br />
                           ` + i.ref + `<br/>
-                        ` + (i.pdf ? `[<a href="` + i.pdf + `" target="_blank">pdf</a>]` : '') + `
+                        ` + (i.pdf ? `[<a href="` + i.pdf + `" target="_blank">pdf</a>]` : ``) + `
                         ` + linksToHtml(i.links) + `
                       </p>
                     </td>
@@ -441,6 +441,18 @@
               </table>`
         
         $("div#publications").html(str)
+        
+        $("a.link-dark").hover((e) => {
+            if ($(e.currentTarget).attr('href')) {
+              $(e.currentTarget).css("color", $(":root").css("--bs-primary"));
+              $(e.currentTarget).removeClass("text-decoration-none");
+            }
+          }, (e) => {
+            if ($(e.currentTarget).attr('href')) {
+              $(e.currentTarget).css("color", $("body").css("color"));
+              $(e.currentTarget).addClass("text-decoration-none");
+            }
+        });
       });
     </script>
   </head>
