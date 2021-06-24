@@ -228,11 +228,6 @@
         }
       }
     </script>
-    <style>
-      .bd-navbar {
-        background: #2264BE;
-      }
-    </style>
     <script>
       let img_width = "100px"
       let img_margin_right = "15px"
@@ -406,6 +401,8 @@
       }
 
       $(document).ready(() => {
+        // set navbar's background color to :root --bs-primary which is #0d6efd
+        $(".bd-navbar").css("background", $(":root").css("--bs-primary"))
 
         let str = `
               <table border="0">
