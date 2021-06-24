@@ -437,9 +437,9 @@
                 <tbody>
               </table>`
         
-        $("div#publications").html(str)
+        $("div#publications-div").html(str)
         
-        $("a.link-dark").hover((e) => {
+        $("a.a-pub").hover((e) => {
             if ($(e.currentTarget).attr('href')) {
               $(e.currentTarget).css("color", $(":root").css("--bs-primary"));
               $(e.currentTarget).removeClass("text-decoration-none");
@@ -450,6 +450,7 @@
               $(e.currentTarget).addClass("text-decoration-none");
             }
         });
+        
       });
     </script>
   </head>
@@ -458,12 +459,10 @@
     <div class="skippy visually-hidden-focusable overflow-hidden">
       <div class="container-xl">
         <a class="d-inline-flex p-2 m-1" href="https://www.drancom.com/#content">Skip to main content</a>
-
       </div>
     </div>
 
-
-    <header class="navbar navbar-expand-md navbar-dark fixed-top bd-navbar ">
+    <header class="navbar navbar-expand-md navbar-dark fixed-top bd-navbar">
       <nav class="container-xxl flex-wrap flex-md-nowrap" aria-label="Main navigation">
         <a class="navbar-brand p-0 me-2" href="/" aria-label="Byoungkwon An (Kwon An)">
         </a>
@@ -512,8 +511,7 @@
 
 
     <main>
-
-      <div class="bd-masthead mb-3" id="content">
+      <div class="bd-masthead mb-3" id="content" >
         <div class="container px-4 px-md-3">
           <div class="row align-items-lg-center">
             <div class="col-5 mx-auto col-md-4 order-md-2 col-lg-3">
@@ -538,14 +536,14 @@
             </div>
           </div>
         </div>
-        <a name="education"></a>
+        <a name="publications"></a>
       </div>
 
       <div class="container masthead-followup px-4 px-md-3">
-        <section class="row mb-5 pb-md-4 align-items-center" >
+        <section class="row mb-5 pb-md-4 align-items-center">
           <div class="col">
-            <h2 class="display-5 fw-normal">Publications [<a href="https://scholar.google.com/citations?user=y1h7segAAAAJ&hl=en&oi=sra" target="_blank">Google Scholar</a>]</h2><a name="publications"></a>
-            <div class="col" id="publications">
+            <h2 class="display-5 fw-normal">Publications [<a href="https://scholar.google.com/citations?user=y1h7segAAAAJ&hl=en&oi=sra" target="_blank">Google Scholar</a>]</h2>
+            <div class="col" id="publications-div">
             </div>
           </div>
           <a name="patent"></a>
