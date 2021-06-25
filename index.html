@@ -230,9 +230,6 @@
     </script>
     <script>
       $(document).ready(function () {
-        // set navbar's background color to :root --bs-primary which is #0d6efd
-        $(".bd-navbar").css("background", $(":root").css("--bs-primary"));
-
         $("a.a-pub").hover(function (e) {
             if ($(e.currentTarget).attr('href')) {
               $(e.currentTarget).css("color", $(":root").css("--bs-primary"));
@@ -256,7 +253,7 @@
       </div>
     </div>
 
-    <header class="navbar navbar-expand-md navbar-dark fixed-top bd-navbar">
+    <header class="navbar navbar-expand-md navbar-dark fixed-top bd-navbar bg-primary">
       <nav class="container-xxl flex-wrap flex-md-nowrap" aria-label="Main navigation">
         <a class="navbar-brand p-0 me-2" href="/" aria-label="Byoungkwon An (Kwon An)">
         </a>
