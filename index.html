@@ -217,28 +217,28 @@
           const navLinks = document.querySelectorAll('.nav-item')
           const menuToggle = document.getElementById('bdNavbar')
           const bsCollapse = new bootstrap.Collapse(menuToggle)
-          navLinks.forEach((l) => {
-            l.addEventListener('click', () => { bsCollapse.toggle() })
+          navLinks.forEach(function (i) {
+            i.addEventListener('click', function () { bsCollapse.toggle(); })
           })
 
           const navBtnCv = document.getElementById('navBtnCv')
-          navBtnCv.addEventListener('click', () => { bsCollapse.toggle() })
+          navBtnCv.addEventListener('click', function () { bsCollapse.toggle(); })
           
           doesToggleEventCalled=true;
         }
       }
     </script>
     <script>
-      $(document).ready(() => {
+      $(document).ready(function () {
         // set navbar's background color to :root --bs-primary which is #0d6efd
-        $(".bd-navbar").css("background", $(":root").css("--bs-primary"))
+        $(".bd-navbar").css("background", $(":root").css("--bs-primary"));
 
-        $("a.a-pub").hover((e) => {
+        $("a.a-pub").hover(function (e) {
             if ($(e.currentTarget).attr('href')) {
               $(e.currentTarget).css("color", $(":root").css("--bs-primary"));
               $(e.currentTarget).removeClass("text-decoration-none");
             }
-          }, (e) => {
+          }, function (e) {
             if ($(e.currentTarget).attr('href')) {
               $(e.currentTarget).css("color", $("body").css("color"));
               $(e.currentTarget).addClass("text-decoration-none");
