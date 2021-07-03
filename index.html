@@ -19,7 +19,7 @@
     })(window,document,'script','dataLayer','GTM-W4FNNBS');</script>
     <!-- End Google Tag Manager -->
 
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" \>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <script async="" src="chrome-extension://ofdopmlmgifpfkijadehmhjccbefaeec/assets/comms/commsGDocs.js"></script>
     <script async="" src="chrome-extension://ofdopmlmgifpfkijadehmhjccbefaeec/assets/comms/commsMngr.js"></script>
     <script async="" src="chrome-extension://ofdopmlmgifpfkijadehmhjccbefaeec/assets/comms/commands.js"></script>
@@ -191,14 +191,10 @@
 
     <link rel="canonical" href="https://www.drancom.com/">
 
-
-
-    <!-- Bootstrap 5 core CSS -->
+    <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"/>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
- 
-    <link href="dist/bootstrap5_0/docs.css" rel="stylesheet" />
-    <!-- End Bootstrap 5 core CSS -->
+    <!-- End Bootstrap 5 CSS -->
 
     <!-- Bootstrap 4 core CSS -->
     <!--link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"-->
@@ -206,7 +202,11 @@
     <!--script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script-->
     <!--script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script-->
     <!-- End Bootstrap 4 core CSS -->
-    
+
+    <!-- Custom CSS and JS -->
+    <link href="src/style.css" rel="stylesheet" />
+    <script src="src/index.js"></script>
+
     <!-- Favicons -->
     
 
@@ -228,41 +228,7 @@
     <meta property="og:image:width" content="1000" />
     <meta property="og:image:height" content="500" />
 
-    <!-- Collapse toggle menu after click -->  
-    <script>
-      var doesToggleEventCalled=false;
-      function addToggleEvent() {
-        if (!doesToggleEventCalled) {
-          const navLinks = document.querySelectorAll('.nav-item')
-          const menuToggle = document.getElementById('bdNavbar')
-          const bsCollapse = new bootstrap.Collapse(menuToggle)
-          navLinks.forEach(function (i) {
-            i.addEventListener('click', function () { bsCollapse.toggle(); })
-          })
-
-          const navBtnCv = document.getElementById('navBtnCv')
-          navBtnCv.addEventListener('click', function () { bsCollapse.toggle(); })
-          
-          doesToggleEventCalled=true;
-        }
-      }
-    </script>
-    <script>
-      $(document).ready(function () {
-        $("a.a-pub").hover(function (e) {
-            if ($(e.currentTarget).attr('href')) {
-              $(e.currentTarget).css("color", $(":root").css("--bs-primary"));
-              $(e.currentTarget).removeClass("text-decoration-none");
-            }
-          }, function (e) {
-            if ($(e.currentTarget).attr('href')) {
-              $(e.currentTarget).css("color", $("body").css("color"));
-              $(e.currentTarget).addClass("text-decoration-none");
-            }
-        });
-        
-      });
-    </script>
+    
   </head>
   <body>
     <!-- Google Tag Manager (noscript) -->
@@ -277,19 +243,19 @@
       </div>
     </div>
 
-    <header class="navbar navbar-expand-md navbar-dark fixed-top bd-navbar bg-primary">
+    <header class="navbar navbar-expand-md navbar-dark fixed-top st-navbar">
       <nav class="container-xxl flex-wrap flex-md-nowrap" aria-label="Main navigation">
         <a class="navbar-brand p-0 me-2" href="/" aria-label="Byoungkwon An (Kwon An)">
         </a>
 
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#bdNavbar" aria-controls="bdNavbar" aria-expanded="false" aria-label="Toggle navigation" onclick="addToggleEvent();">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#stNavbar" aria-controls="stNavbar" aria-expanded="false" aria-label="Toggle navigation" onclick="addToggleEvent();">
           <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" class="bi" fill="currentColor" viewBox="0 0 16 16">
             <path fill-rule="evenodd" d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"></path>
           </svg>
         </button>
 
-        <div class="collapse navbar-collapse" id="bdNavbar">
-          <ul class="navbar-nav flex-row flex-wrap bd-navbar-nav pt-2 py-md-0">
+        <div class="collapse navbar-collapse" id="stNavbar">
+          <ul class="navbar-nav flex-row flex-wrap st-navbar-nav pt-2 py-md-0">
             <li class="nav-item col-6 col-md-auto">
               <a class="nav-link p-2 active" aria-current="page" href="https://www.drancom.com/">Home</a>
             </li>
@@ -314,14 +280,14 @@
               </a>
             </li>
           </ul>
-          <a id="navBtnCv" class="btn btn-bd-cv d-lg-inline-block my-2 my-md-0 ms-md-3" href="cv-kwon-an.pdf" target="_blank">CV</a>
+          <a id="navBtnCv" class="btn btn-st-cv d-lg-inline-block my-2 my-md-0 ms-md-3" href="cv-kwon-an.pdf" target="_blank">CV</a>
         </div>
       </nav>
     </header>
 
 
     <main>
-      <div class="bd-masthead mb-3" id="content" >
+      <div class="st-masthead mb-3" id="content" >
         <div class="container px-4 px-md-3">
           <div class="row align-items-center">
             <div class="col-5 mx-auto col-md-4 order-md-2 col-lg-3">
@@ -350,7 +316,7 @@
       </div>
 
       <div class="container masthead-followup px-4 px-md-3">
-        <section class="row mb-5 pb-md-4 align-items-center">
+        <section class="row mb-5 pb-md-4">
           <div class="col">
             <h2 class="display-5 fw-normal">Publications [<a href="https://scholar.google.com/citations?user=y1h7segAAAAJ&hl=en&oi=sra" target="_blank">Google Scholar</a>]</h2>
             <div class="col" id="publications-div">
@@ -767,7 +733,7 @@
           <a name="patent"></a>
         </section>
 
-        <section class="row mb-5 pb-md-4 align-items-center">
+        <section class="row mb-5 pb-md-4">
           <div class="col">
             <h2 class="display-5 fw-normal">Patent</h2>
             <div class="col">
@@ -794,7 +760,7 @@
           <a name="media"></a>
         </section>
 
-        <section class="row mb-5 pb-md-4 align-items-center">
+        <section class="row mb-5 pb-md-4">
           <div class="col">
             <h2 class="display-5 fw-normal">Media Coverage (Selected)</h2>
             <div class="col">
@@ -980,17 +946,16 @@
       <div class="container py-5">
         <div class="row">
           <div class="col-lg-3 mb-3">
-          <span class="fs-5">Byoungkwon An<br/>(Kwon An)</span> <br/>
-          <span class="fs-7">B. An; 안병권 </span>
+            <span class="fs-5">Byoungkwon An<br/>(Kwon An)</span> <br/>
+            <span class="fs-7">B. An; 안병권 </span>
+          </div>
         </div>
       </div>
     </footer>
 
-    <script src="/dist/bootstrap5_0/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
-    <script src="/dist/bootstrap5_0/docs.min.js"></script>
-
     <div id="th-socket-state" running="false" style="display: none;"></div>
     <div id="th-page-loaded"></div>
+
     <script type="text/javascript" src="//wcs.naver.net/wcslog.js"></script>
     <script type="text/javascript">
     if(!wcs_add) var wcs_add = {};
