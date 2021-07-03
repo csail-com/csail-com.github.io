@@ -6,6 +6,12 @@
 ## Contents tex 
 - cv-contents.tex : Shared with both master file.
 
+## Build
+- Open _cv/cv-kwon-an.tex in TeXstudio
+- Click Build & View button for _cv/cv-kwon-an.pdf 
+- Open _cv/cv-kwon-an-contacts.tex in TeXstudio
+- Click Build & View button for _cv/cv-kwon-an-contacts.pdf
+
 ## How to deploy updated CV 
 - CV for web link: www.drancom.com/cv-kwon-an.pdf
 - To update, cv-kwon-an.pdf should be moved to the homepage's root dir. 
