@@ -1,22 +1,20 @@
 // Collapse toggle menu after click
-  var doesToggleEventCalled=false;
-  function addToggleEvent() {
-  if (!doesToggleEventCalled) {
-  const navLinks = document.querySelectorAll('.nav-item')
-  const menuToggle = document.getElementById('stNavbar')
-  const bsCollapse = new bootstrap.Collapse(menuToggle)
-  navLinks.forEach(function (i) {
-  i.addEventListener('click', function () { bsCollapse.toggle(); })
+$(document).ready(function () {
+
+  $(document).click(function(event) {
+    var _opened = ($("#stNavbar").css("display") == "block");
+    if (_opened === true
+      && !($(event.target).hasClass("navbar-toggler")
+          || $(event.target.parentElement).hasClass("navbar-toggler")
+          || $(event.target.parentElement.parentElement).hasClass("navbar-toggler"))) {
+      const menuToggle = document.getElementById('stNavbar')
+      const bsCollapse = new bootstrap.Collapse(menuToggle)
+
+     }
+  });
 })
 
-  const navBtnCv = document.getElementById('navBtnCv')
-  navBtnCv.addEventListener('click', function () { bsCollapse.toggle(); })
-
-  doesToggleEventCalled=true;
-}
-}
-
-  $(document).ready(function () {
+$(document).ready(function () {
   $("a.a-pub").hover(function (e) {
     if ($(e.currentTarget).attr('href')) {
       $(e.currentTarget).css("color", $(":root").css("--bs-primary"));
@@ -28,5 +26,4 @@
       $(e.currentTarget).addClass("text-decoration-none");
     }
   });
-
 });
