@@ -107,3 +107,31 @@
     color:#0d6efd;
     text-decoration:underline
 }
+
+
+div.imageblock {
+  float: left;
+  margin-right: 15px;
+  overflow:hidden
+}
+
+div.imageblock img {
+  width: 100px;
+}
+
+img {
+  transform: scale(1);
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transition: all 0.3s ease-in-out;   /* 부드러운 모션을 위해 추가*/
+}
+
+img:hover, div.imageblock img.image-hover, img.image-hover {
+  transform: scale(1.15);
+  -webkit-transform: scale(1.15);
+  -moz-transform: scale(1.15);
+  -ms-transform: scale(1.15);
+  -o-transform: scale(1.15);
+}

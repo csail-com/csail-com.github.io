@@ -27,3 +27,17 @@ $(document).ready(function () {
     }
   });
 });
+
+
+$(document).ready(function () {
+  $("a.a-pub").hover(function (e) {
+    if ($(e.currentTarget).attr('href')) {
+      $(e.currentTarget).parent().parent().parent().find("td > div > a > img").addClass("image-hover");
+    }
+  }, function (e) {
+    if ($(e.currentTarget).attr('href')) {
+      $(e.currentTarget).parent().parent().parent().find("td > div > a > img").removeClass("image-hover");
+    }
+  });
+});
+
