@@ -1,0 +1,135 @@
+% Resume 2.0 (2009-04-12)
+% Copyright 2009 Zach Scrivena
+% zachscrivena@gmail.com
+% http://zs.freeshell.org/latexresume/
+%
+% This document is released under the
+% Creative Commons Attribution 3.0 Unported License
+% http://creativecommons.org/licenses/by/3.0/
+
+%%%%%%%%%%%%%%
+%% PREAMBLE %%
+%%%%%%%%%%%%%%
+
+\documentclass[letterpaper,10pt,oneside]{article}
+%\documentclass[a4paper,12pt,oneside]{article}
+\usepackage{ifthen}
+\usepackage{longtable}
+\usepackage{setspace}
+\usepackage[left=0.5in,right=0.5in,top=0.87in,bottom=0.9in,nohead,nofoot]{geometry}
+\usepackage{marvosym}
+\usepackage{times}
+\usepackage{amssymb}
+\usepackage{color}
+
+\usepackage[bookmarks,
+pdftitle={Resume},
+pdfauthor={Byoungkwon An (Kwon An)},
+pdfsubject={},
+pdfcreator={},
+pdfproducer={},
+pdfkeywords={},
+pdfpagemode={},
+pdfstartview=FitH,
+colorlinks=true,
+linkcolor=black,   %Color for normal internal links.
+anchorcolor=black, %Color for anchor text.
+citecolor=green,   %Color for bibliographical citations in text.
+filecolor=magenta, %Color for URLs which open local files.
+menucolor=red,     %Color for Acrobat menu items.
+urlcolor=black]{hyperref}
+
+\newcommand{\longmonth}[1]{%
+\ifthenelse{\equal{#1}{1}}{January}{}%
+\ifthenelse{\equal{#1}{2}}{February}{}%
+\ifthenelse{\equal{#1}{3}}{March}{}%
+\ifthenelse{\equal{#1}{4}}{April}{}%
+\ifthenelse{\equal{#1}{5}}{May}{}%
+\ifthenelse{\equal{#1}{6}}{June}{}%
+\ifthenelse{\equal{#1}{7}}{July}{}%
+\ifthenelse{\equal{#1}{8}}{August}{}%
+\ifthenelse{\equal{#1}{9}}{September}{}%
+\ifthenelse{\equal{#1}{01}}{January}{}%
+\ifthenelse{\equal{#1}{02}}{February}{}%
+\ifthenelse{\equal{#1}{03}}{March}{}%
+\ifthenelse{\equal{#1}{04}}{April}{}%
+\ifthenelse{\equal{#1}{05}}{May}{}%
+\ifthenelse{\equal{#1}{06}}{June}{}%
+\ifthenelse{\equal{#1}{07}}{July}{}%
+\ifthenelse{\equal{#1}{08}}{August}{}%
+\ifthenelse{\equal{#1}{09}}{September}{}%
+\ifthenelse{\equal{#1}{10}}{October}{}%
+\ifthenelse{\equal{#1}{11}}{November}{}%
+\ifthenelse{\equal{#1}{12}}{December}{}}
+
+\newcommand{\shortmonth}[1]{%
+\ifthenelse{\equal{#1}{1}}{Jan}{}%
+\ifthenelse{\equal{#1}{2}}{Feb}{}%
+\ifthenelse{\equal{#1}{3}}{Mar}{}%
+\ifthenelse{\equal{#1}{4}}{Apr}{}%
+\ifthenelse{\equal{#1}{5}}{May}{}%
+\ifthenelse{\equal{#1}{6}}{Jun}{}%
+\ifthenelse{\equal{#1}{7}}{Jul}{}%
+\ifthenelse{\equal{#1}{8}}{Aug}{}%
+\ifthenelse{\equal{#1}{9}}{Sep}{}%
+\ifthenelse{\equal{#1}{01}}{Jan}{}%
+\ifthenelse{\equal{#1}{02}}{Feb}{}%
+\ifthenelse{\equal{#1}{03}}{Mar}{}%
+\ifthenelse{\equal{#1}{04}}{Apr}{}%
+\ifthenelse{\equal{#1}{05}}{May}{}%
+\ifthenelse{\equal{#1}{06}}{Jun}{}%
+\ifthenelse{\equal{#1}{07}}{Jul}{}%
+\ifthenelse{\equal{#1}{08}}{Aug}{}%
+\ifthenelse{\equal{#1}{09}}{Sep}{}%
+\ifthenelse{\equal{#1}{10}}{Oct}{}%
+\ifthenelse{\equal{#1}{11}}{Nov}{}%
+\ifthenelse{\equal{#1}{12}}{Dec}{}}
+
+% Style settings
+\pagestyle{empty}
+\setlength{\parindent}{0in}
+\renewcommand{\thefootnote}{\fnsymbol{footnote}} % change footnote symbols
+
+% Macros
+\newenvironment{myresume}[2]{\pdfbookmark{#1}{#1}{\huge{#1}}\vspace{1mm}\hrule\vspace{-10mm}\begin{longtable}{p{0.12\textwidth} p{0.83\textwidth}}~&#2}{\end{longtable}}
+\renewcommand{\section}[2]{\vspace{-1.3em}\\\pdfbookmark{#1}{#2}{\singlespace\textsc{#1}}&}
+\newcommand{\firstentry}[1]{\newline#1}
+\newcommand{\entry}[1]{\vspace{-0.8em}\\~&#1}
+\newcommand{\hide}[1]{}
+
+% Datestamp format: \datestamp{YEAR}{MONTH}{DAY}
+%\newcommand{\datestamp}[3]{\longmonth{#2} #3, #1}
+%\newcommand{\datestamp}[3]{\shortmonth{#2} #3, #1}
+\newcommand{\datestamp}[3]{\shortmonth{#2} #1}
+
+%%%%%%%%%%%%%%%%
+%% NAME BLOCK %%
+%%%%%%%%%%%%%%%%
+
+\begin{document}
+\begin{myresume}{Byoungkwon An}
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%% CONTECT INFORMATION %%
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Contact\newline Information}{contact}
+
+%\firstentry{
+%276 Grove Street $\#$ 9  \hfill (617) 335-1680 \newline
+%Newton, MA 02466  \hfill \href{mailto:dran@csail.mit.edu}{\textit{dran@csail.mit.edu}}
+%\newline
+%USA \hfill \href{http://www.drancom.com}{\textit{www.drancom.com}} 
+%}
+
+\firstentry{
+\begin{tabular}{@{\hspace{0mm}}l@{\hspace{4cm}}l}
+Phone: 010-3552-1151 \\
+Email: \href{mailto:dran@csail.mit.edu}{\color{black}\textit{dran@csail.mit.edu}}
+\\
+Web: \href{http://www.drancom.com}{\color{black}{\textit{www.drancom.com}}}\\%, \href{http://scholar.google.com/citations?user=y1h7segAAAAJ\&hl=en}{\color{black}\textit{Google Scholar Profile}}
+\end{tabular}
+}
+
+\input{cv-contents}
+\end{myresume}
+\end{document}
