@@ -93,7 +93,7 @@ urlcolor=black]{hyperref}
 % Macros
 \newenvironment{myresume}[2]{\pdfbookmark{#1}{#1}{\huge{#1}}\vspace{1mm}\hrule\vspace{-10mm}\begin{longtable}{p{0.12\textwidth} p{0.83\textwidth}}~&#2}{\end{longtable}}
 \renewcommand{\section}[2]{\vspace{-1.3em}\\\pdfbookmark{#1}{#2}{\singlespace\textsc{#1}}&}
-\newcommand{\firstentry}[1]{\newline#1}
+\newcommand{\firstentry}[1]{\par\vspace{0mm}#1}
 \newcommand{\entry}[1]{\vspace{-0.8em}\\~&#1}
 \newcommand{\hide}[1]{}
 
