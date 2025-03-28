@@ -1,9 +1,12 @@
 /** @jsxImportSource @emotion/react */
 "use client";
 
-import { Background, Flex, MotionLayer, Text } from "@/@dble_layout";
+import { Background, Button, Flex, MotionLayer, Text } from "@/@dble_layout";
+import { useRouter } from "@/hooks/useRouter";
 
 export default function Page() {
+  const router = useRouter();
+
   const strokeData = [
     {
       resource:
@@ -128,6 +131,8 @@ export default function Page() {
             하이욤 zzzzz
           </Text>
         </MotionLayer>
+
+        <Button onClick={() => router.push("/hi")}>Go to hi</Button>
         {/* <Padding all={100} _mq={{ w1080: { all: 20 } }}>
           <CanvasDraw initialData={JSON.stringify(strokeData)} />
         </Padding> */}

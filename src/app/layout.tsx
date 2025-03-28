@@ -1,4 +1,4 @@
-import AppProvider from "@/provider/AppProvider";
+import AppProvider from "@/lib/provider/AppProvider";
 import type { Metadata } from "next";
 import { Noto_Sans_KR } from "next/font/google";
 import "./globals.css";
