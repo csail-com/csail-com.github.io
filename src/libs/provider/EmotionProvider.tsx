@@ -1,6 +1,6 @@
 "use client";
 
-import { emotionTheme } from "@/lib/themes/emotionTheme";
+import { emotionTheme } from "@/libs/themes/emotionTheme";
 import createCache from "@emotion/cache";
 import { CacheProvider, ThemeProvider } from "@emotion/react";
 import { useServerInsertedHTML } from "next/navigation";

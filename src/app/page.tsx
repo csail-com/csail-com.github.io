@@ -9,7 +9,7 @@ import {
   Padding,
   Text,
 } from "@/@dble_layout";
-import { useRouter } from "@/lib/hooks";
+import { useRouter } from "@/libs/hooks";
 
 export default function Page() {
   const router = useRouter();

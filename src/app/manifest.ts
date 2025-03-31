@@ -1,4 +1,4 @@
-import { mySite } from "@/lib/site/mySite";
+import { mySite } from "@/libs/site/mySite";
 import { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {

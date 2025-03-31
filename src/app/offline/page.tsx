@@ -3,7 +3,7 @@
 
 import { MotionLayer } from "@/@dble_layout";
 
-import { colors, fontSize } from "@/lib/themes";
+import { colors, fontSize } from "@/libs/themes";
 
 //
 export default function Error() {

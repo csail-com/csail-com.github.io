@@ -16,10 +16,12 @@ export const mySite = {
   ],
 
   business: {
-    name: "주식회사 디블에이전시",
+    companyName: "주식회사 디블에이전시",
     author: "정재환",
     tel: "+82-02-1234-5678",
+    email: "deep@deepcomu.com",
     availableLanguage: "Korean",
+    taxID: "123-45-67890",
     address: {
       street: "강남구 테헤란로 152 강남파이낸스센터 12층", // 도로명 주소
       region: "서울특별시", // 지역 : 시 단위

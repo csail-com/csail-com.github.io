@@ -1,9 +1,9 @@
 import { MutableRefObject } from "react";
 
-const scrollToNextRef = (
+export default function onScrollToNextRef(
   ref: MutableRefObject<HTMLElement | null>,
   position?: number
-) => {
+) {
   const scrollHandler = () => {
     if (ref.current instanceof HTMLElement) {
       // Check if ref.current is an HTML element
@@ -21,6 +21,4 @@ const scrollToNextRef = (
 
   const timeoutId = setTimeout(() => scrollHandler(), 100);
   return () => clearTimeout(timeoutId);
-};
-
-export { scrollToNextRef };
+}

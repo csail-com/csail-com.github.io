@@ -1,4 +1,4 @@
-import { menus } from "@/lib/site/menus";
+import { menus } from "@/libs/site/menus";
 import { MetadataRoute } from "next";
 
 /**

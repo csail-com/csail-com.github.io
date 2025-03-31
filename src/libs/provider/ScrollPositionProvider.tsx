@@ -1,7 +1,7 @@
 "use client";
 
-import { useRouter } from "@/lib/hooks";
-import { useScrollPositionStore } from "@/lib/store/scrollPositionStore";
+import { useRouter } from "@/libs/hooks";
+import { useScrollPositionStore } from "@/libs/store/scrollPositionStore";
 import { ReactNode, useEffect } from "react";
 
 // 실제 스크롤 위치 관리를 담당하는 내부 컴포넌트

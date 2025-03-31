@@ -2,11 +2,12 @@
 
 "use client";
 
-import ScrollPositionProvider from "@/providers/ScrollPositionProvider";
 import { type ReactNode } from "react";
 import EmotionProvider from "./EmotionProvider";
+import { JengaProvider } from "./JengaProvider";
 import QueryProvider from "./QueryProvider";
 import RecoilProvider from "./RecoilProvider";
+import ScrollPositionProvider from "./ScrollPositionProvider";
 
 export default function AppProvider({ children }: { children: ReactNode }) {
   return (
@@ -14,18 +15,20 @@ export default function AppProvider({ children }: { children: ReactNode }) {
       <QueryProvider>
         <RecoilProvider>
           <ScrollPositionProvider>
-            <main
-              css={{
-                width: "100%",
-                height: "100%",
-                flex: 1,
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-              }}
-            >
-              {children}
-            </main>
+            <JengaProvider>
+              <main
+                css={{
+                  width: "100%",
+                  height: "100%",
+                  flex: 1,
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                }}
+              >
+                {children}
+              </main>
+            </JengaProvider>
           </ScrollPositionProvider>
         </RecoilProvider>
       </QueryProvider>

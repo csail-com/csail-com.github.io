@@ -1,7 +1,7 @@
 "use client";
 
-import axiosInstance from "@/lib/api/axios";
-import { getQueryClient } from "@/lib/provider/QueryProvider";
+import axiosInstance from "@/libs/api/axios";
+import { getQueryClient } from "@/libs/provider/QueryProvider";
 import styled from "@emotion/styled";
 import {
   dehydrate,

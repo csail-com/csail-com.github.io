@@ -2,8 +2,8 @@
 "use client";
 
 import { MotionLayer } from "@/@dble_layout";
-import { useRouter } from "@/lib/hooks";
-import { colors, fontSize } from "@/lib/themes";
+import { useRouter } from "@/libs/hooks";
+import { colors, fontSize } from "@/libs/themes";
 
 //
 export default function Error() {

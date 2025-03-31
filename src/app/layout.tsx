@@ -1,5 +1,5 @@
-import AppProvider from "@/lib/provider/AppProvider";
-import { mySite } from "@/lib/site/mySite";
+import AppProvider from "@/libs/provider/AppProvider";
+import { mySite } from "@/libs/site/mySite";
 import type { Metadata } from "next";
 import { Noto_Sans_KR } from "next/font/google";
 import Script from "next/script";
@@ -172,7 +172,7 @@ function generateJsonLd() {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "@id": `${baseUrl}/#localbusiness`,
-    name: mySite.business.name, // 정확한 법인명 사용
+    name: mySite.business.companyName, // 정확한 법인명 사용
     url: baseUrl,
     telephone: mySite.business.tel, // 서울 지역번호 포함한 형식
     address: {
