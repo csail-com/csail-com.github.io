@@ -40,26 +40,6 @@ const Grid = React.forwardRef<HTMLElement, GridLayoutElement & LayoutPropsRef>(
       ...rest
     } = props;
 
-    const pPs = {
-      w,
-      maxW,
-      minW,
-      h,
-      maxH,
-      minH,
-      templateColumns,
-      templateRows,
-      templateAreas,
-      gap,
-      autoFlow,
-      autoColumns,
-      autoRows,
-      justifyItems,
-      alignItems,
-      justifyContent,
-      alignContent,
-    };
-
     const Component = as || "div";
 
     //
@@ -114,17 +94,56 @@ const Grid = React.forwardRef<HTMLElement, GridLayoutElement & LayoutPropsRef>(
 
     //
     // combined styles
-    const combinedStyles = useMemo(
-      () => css`
+    const combinedStyles = useMemo(() => {
+      const pPs = {
+        w,
+        maxW,
+        minW,
+        h,
+        maxH,
+        minH,
+        templateColumns,
+        templateRows,
+        templateAreas,
+        gap,
+        autoFlow,
+        autoColumns,
+        autoRows,
+        justifyItems,
+        alignItems,
+        justifyContent,
+        alignContent,
+      };
+
+      return css`
         ${baseStyle}
         ${ExtendedStyles({
           ...pPs,
           w: pPs.w ?? "100%",
         })}
-    ${mediaStyles}
-      `,
-      [baseStyle, pPs, mediaStyles]
-    );
+          ${mediaStyles}
+      `;
+    }, [
+      baseStyle,
+      mediaStyles,
+      w,
+      maxW,
+      minW,
+      h,
+      maxH,
+      minH,
+      templateColumns,
+      templateRows,
+      templateAreas,
+      gap,
+      autoFlow,
+      autoColumns,
+      autoRows,
+      justifyItems,
+      alignItems,
+      justifyContent,
+      alignContent,
+    ]);
 
     const combinedClassName = cx(`dble-grid${as ? `-${as}` : ""}`, className);
     return (

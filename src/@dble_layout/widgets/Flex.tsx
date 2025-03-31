@@ -42,28 +42,6 @@ const Flex = React.forwardRef<HTMLElement, FlexLayoutElement & LayoutPropsRef>(
       ...rest
     } = props;
 
-    const pPs = {
-      w,
-      maxW,
-      minW,
-      h,
-      maxH,
-      minH,
-      flex,
-      direc,
-      isReverse,
-      align,
-      justify,
-      gap,
-      order,
-      grow,
-      shrink,
-      basis,
-      alignContent,
-      alignSelf,
-      wrap,
-    };
-
     const Component = as || "div";
 
     //
@@ -119,18 +97,61 @@ const Flex = React.forwardRef<HTMLElement, FlexLayoutElement & LayoutPropsRef>(
 
     //
     // combined styles
-    const combinedStyles = useMemo(
-      () => css`
+    const combinedStyles = useMemo(() => {
+      const pPs = {
+        w,
+        maxW,
+        minW,
+        h,
+        maxH,
+        minH,
+        flex,
+        direc,
+        isReverse,
+        align,
+        justify,
+        gap,
+        order,
+        grow,
+        shrink,
+        basis,
+        alignContent,
+        alignSelf,
+        wrap,
+      };
+
+      return css`
         ${baseStyle}
         ${ExtendedStyles({
           ...pPs,
           w: pPs.w ?? "100%",
           direc: pPs.direc ?? "column",
         })}
-    ${mediaStyles}
-      `,
-      [baseStyle, pPs, mediaStyles]
-    );
+          ${mediaStyles}
+      `;
+    }, [
+      baseStyle,
+      mediaStyles,
+      w,
+      maxW,
+      minW,
+      h,
+      maxH,
+      minH,
+      flex,
+      direc,
+      isReverse,
+      align,
+      justify,
+      gap,
+      order,
+      grow,
+      shrink,
+      basis,
+      alignContent,
+      alignSelf,
+      wrap,
+    ]);
 
     const combinedClassName = cx(`dble-flex${as ? `-${as}` : ""}`, className);
     return (

@@ -34,16 +34,12 @@ const TouchableOpacity = React.forwardRef<
       h,
       maxH,
       minH,
-
-      // flex
       direc,
       isReverse,
       align,
       justify,
       gap,
       wrap,
-
-      // typography
       txtSize,
       txtWeight,
       txtAlign,
@@ -52,23 +48,17 @@ const TouchableOpacity = React.forwardRef<
       txtTransform,
       lineHeight,
       whiteSpace,
-
-      // padding
       padding,
-
-      // background
       fill,
       gradient,
       border,
       shadow,
       opacity,
       scale,
-
       zIndex,
       cursor,
       userSelect = "none",
       transition = { duration: 0.2, type: "ease-in-out" },
-
       _hover,
       _focus,
       _active,
@@ -80,44 +70,6 @@ const TouchableOpacity = React.forwardRef<
     },
     ref
   ) => {
-    const pPs = {
-      w,
-      maxW,
-      minW,
-      h,
-      maxH,
-      minH,
-
-      //
-      direc,
-      isReverse,
-      align,
-      justify,
-      gap,
-      wrap,
-
-      //
-      txtSize,
-      txtWeight,
-      txtAlign,
-      txtColor,
-      txtShadow,
-      txtTransform,
-      lineHeight,
-      whiteSpace,
-
-      //
-      padding,
-
-      //
-      fill,
-      gradient,
-      border,
-      shadow,
-      opacity,
-      scale,
-    };
-
     const Component = as || "div";
 
     const handleClick = useCallback(
@@ -247,6 +199,36 @@ const TouchableOpacity = React.forwardRef<
     //
     // combined styles
     const combinedStyles = useMemo(() => {
+      const pPs = {
+        w,
+        maxW,
+        minW,
+        h,
+        maxH,
+        minH,
+        direc,
+        isReverse,
+        align,
+        justify,
+        gap,
+        wrap,
+        txtSize,
+        txtWeight,
+        txtAlign,
+        txtColor,
+        txtShadow,
+        txtTransform,
+        lineHeight,
+        whiteSpace,
+        padding,
+        fill,
+        gradient,
+        border,
+        shadow,
+        opacity,
+        scale,
+      };
+
       const baseProps = {
         ...pPs,
         direc: pPs.direc ?? "row",
@@ -263,7 +245,38 @@ const TouchableOpacity = React.forwardRef<
           ${mediaStyles}
           ${pseudoStyles}
       `;
-    }, [baseStyle, pPs, mediaStyles, pseudoStyles]);
+    }, [
+      baseStyle,
+      mediaStyles,
+      pseudoStyles,
+      w,
+      maxW,
+      minW,
+      h,
+      maxH,
+      minH,
+      direc,
+      isReverse,
+      align,
+      justify,
+      gap,
+      wrap,
+      txtSize,
+      txtWeight,
+      txtAlign,
+      txtColor,
+      txtShadow,
+      txtTransform,
+      lineHeight,
+      whiteSpace,
+      padding,
+      fill,
+      gradient,
+      border,
+      shadow,
+      opacity,
+      scale,
+    ]);
 
     const combinedClassName = cx(
       `dble-touchableOpacity${as ? `-${as}` : ""}`,

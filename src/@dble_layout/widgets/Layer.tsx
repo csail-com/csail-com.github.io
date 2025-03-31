@@ -73,43 +73,6 @@ const Layer = React.forwardRef<
     ...rest
   } = props;
 
-  const pPs = {
-    // layout
-    w,
-    maxW,
-    minW,
-    h,
-    maxH,
-    minH,
-
-    // flex
-    flex,
-    direc,
-    isReverse,
-    align,
-    justify,
-    gap,
-    order,
-
-    // position
-    position,
-
-    // padding
-    padding,
-
-    // margin
-    margin,
-
-    // background
-    fill,
-    border,
-    shadow,
-    blur,
-    opacity,
-    scale,
-    rotate,
-  };
-
   const Component = as || "div";
 
   //
@@ -230,8 +193,45 @@ const Layer = React.forwardRef<
 
   //
   // combined styles
-  const combinedStyles = useMemo(
-    () => css`
+  const combinedStyles = useMemo(() => {
+    const pPs = {
+      // layout
+      w,
+      maxW,
+      minW,
+      h,
+      maxH,
+      minH,
+
+      // flex
+      flex,
+      direc,
+      isReverse,
+      align,
+      justify,
+      gap,
+      order,
+
+      // position
+      position,
+
+      // padding
+      padding,
+
+      // margin
+      margin,
+
+      // background
+      fill,
+      border,
+      shadow,
+      blur,
+      opacity,
+      scale,
+      rotate,
+    };
+
+    return css`
       ${baseStyle}
       ${ExtendedStyles({
         ...pPs,
@@ -239,11 +239,37 @@ const Layer = React.forwardRef<
         h: pPs.h ?? (pPs.flex === 1 ? "100%" : undefined),
         direc: pPs.direc ?? "column",
       })}
-      ${mediaStyles}
-      ${pseudoStyles}
-    `,
-    [baseStyle, pPs, mediaStyles, pseudoStyles]
-  );
+        ${mediaStyles}
+        ${pseudoStyles}
+    `;
+  }, [
+    baseStyle,
+    mediaStyles,
+    pseudoStyles,
+    w,
+    maxW,
+    minW,
+    h,
+    maxH,
+    minH,
+    flex,
+    direc,
+    isReverse,
+    align,
+    justify,
+    gap,
+    order,
+    position,
+    padding,
+    margin,
+    fill,
+    border,
+    shadow,
+    blur,
+    opacity,
+    scale,
+    rotate,
+  ]);
 
   const combinedClassName = cx(`dble-layer${as ? `-${as}` : ""}`, className);
   return (

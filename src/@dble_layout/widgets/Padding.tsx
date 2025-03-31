@@ -3,7 +3,7 @@
 
 import { cx } from "@emotion/css";
 import { css, SerializedStyles } from "@emotion/react";
-import React, { useMemo } from "react";
+import React, { useCallback, useMemo } from "react";
 import { baseStylesProps } from "../styles/baseStylesProps";
 import { spaceStylesProps } from "../styles/spaceStylesProps";
 import { LayoutPropsRef } from "../types/piece/PipeLinePropsType";
@@ -58,13 +58,27 @@ const Padding = React.forwardRef<
       left,
       right,
     }),
-    [w, maxW, minW, h, maxH, minH, all, horizontal, vertical, top, bottom, left]
+    [
+      w,
+      maxW,
+      minW,
+      h,
+      maxH,
+      minH,
+      all,
+      horizontal,
+      vertical,
+      top,
+      bottom,
+      left,
+      right,
+    ]
   );
 
   const Component = as || "div";
 
   // ExtendedStyles 함수의 반환 타입을 SerializedStyles로 변경
-  const ExtendedStyles = (props: PaddingType): SerializedStyles => {
+  const ExtendedStyles = useCallback((props: PaddingType): SerializedStyles => {
     return css({
       width: props?.w,
       maxWidth: props?.maxW,
@@ -84,7 +98,7 @@ const Padding = React.forwardRef<
         },
       }),
     });
-  };
+  }, []);
 
   // base style
   const baseStyle = useMemo(
@@ -104,7 +118,7 @@ const Padding = React.forwardRef<
   // media-query styles
   const mediaStyles = useMemo(
     () => createMediaStyles(_mq, ExtendedStyles),
-    [_mq]
+    [_mq, ExtendedStyles]
   );
 
   // combined styles: 배열로 결합하여 css 함수를 사용
@@ -118,7 +132,7 @@ const Padding = React.forwardRef<
         }),
         mediaStyles,
       ]),
-    [baseStyle, pPs, mediaStyles]
+    [baseStyle, pPs, mediaStyles, ExtendedStyles]
   );
 
   const combinedClassName = cx(`dble-padding${as ? `-${as}` : ""}`, className);

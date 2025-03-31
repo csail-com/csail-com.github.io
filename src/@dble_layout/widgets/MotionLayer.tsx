@@ -344,9 +344,14 @@ const MotionLayer = memo(
         className
       );
 
-      // Use explicit type casting to fix complex generic type error
-      const MotionComponent = (motion[as as keyof typeof motion] ||
-        motion.div) as React.ElementType;
+      // More robust fix to ensure we always have a valid component
+      let MotionComponent: React.ElementType = motion.div;
+      if (as && typeof as === "string") {
+        const requestedComponent = motion[as as keyof typeof motion];
+        if (requestedComponent) {
+          MotionComponent = requestedComponent as React.ElementType;
+        }
+      }
 
       return (
         <MotionComponent

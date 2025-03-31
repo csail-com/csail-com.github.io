@@ -3,7 +3,7 @@
 
 import { cx } from "@emotion/css";
 import { css } from "@emotion/react";
-import React, { useMemo } from "react";
+import React, { useCallback, useMemo } from "react";
 import { TrafficType } from "../types/piece/TrafficType";
 import { DividerPropsType, DividerType } from "../types/props/DividerPropsType";
 import { createMediaStyles } from "../utils/createMediaStyles";
@@ -25,39 +25,45 @@ const Divider = React.forwardRef<HTMLDivElement, DividerPropsType>(
   ) {
     type NumbericType = number | string;
 
-    const Types = (props: { w?: NumbericType; h?: NumbericType }) => ({
-      width: direc === "horizontal" ? props.w ?? "100%" : props.w ?? 1,
-      minWidth: direc === "horizontal" ? props.w ?? "100%" : props.w ?? 1,
-      maxWidth: direc === "horizontal" ? props.w ?? "100%" : props.w ?? 1,
-      height: direc === "vertical" ? props.h ?? "100%" : props.h ?? 1,
-      minHeight: direc === "vertical" ? props.h ?? "100%" : props.h ?? 1,
-      maxHeight: direc === "vertical" ? props.h ?? "100%" : props.h ?? 1,
-    });
+    const Types = useCallback(
+      (props: { w?: NumbericType; h?: NumbericType }) => ({
+        width: direc === "horizontal" ? props.w ?? "100%" : props.w ?? 1,
+        minWidth: direc === "horizontal" ? props.w ?? "100%" : props.w ?? 1,
+        maxWidth: direc === "horizontal" ? props.w ?? "100%" : props.w ?? 1,
+        height: direc === "vertical" ? props.h ?? "100%" : props.h ?? 1,
+        minHeight: direc === "vertical" ? props.h ?? "100%" : props.h ?? 1,
+        maxHeight: direc === "vertical" ? props.h ?? "100%" : props.h ?? 1,
+      }),
+      [direc]
+    );
 
-    const getSpacing = (spacing?: TrafficType, type?: string) => {
+    const getSpacing = useCallback((spacing?: TrafficType, type?: string) => {
       if (!spacing || !type) return undefined;
       return (
         spacing.all ??
         spacing[type as keyof TrafficType] ??
         spacing[type === "vertical" ? "top" : ("left" as keyof TrafficType)]
       );
-    };
+    }, []);
 
-    const DividerStyle = (props: DividerType) =>
-      css({
-        backgroundColor: props.color,
-        transition: "0.25s ease-in-out",
-        borderRadius: props.radius,
-        marginTop: getSpacing(props.spacing, "vertical"),
-        marginBottom: getSpacing(props.spacing, "vertical"),
-        marginLeft: getSpacing(props.spacing, "horizontal"),
-        marginRight: getSpacing(props.spacing, "horizontal"),
-        ...Types({ w: props.w, h: props.h }),
-      });
+    const DividerStyle = useCallback(
+      (props: DividerType) =>
+        css({
+          backgroundColor: props.color,
+          transition: "0.25s ease-in-out",
+          borderRadius: props.radius,
+          marginTop: getSpacing(props.spacing, "vertical"),
+          marginBottom: getSpacing(props.spacing, "vertical"),
+          marginLeft: getSpacing(props.spacing, "horizontal"),
+          marginRight: getSpacing(props.spacing, "horizontal"),
+          ...Types({ w: props.w, h: props.h }),
+        }),
+      [Types, getSpacing]
+    );
 
     const mediaStyles = useMemo(
       () => createMediaStyles(_mq, DividerStyle),
-      [_mq]
+      [_mq, DividerStyle]
     );
 
     const combinedClassName = cx("dble-divider", props.className);

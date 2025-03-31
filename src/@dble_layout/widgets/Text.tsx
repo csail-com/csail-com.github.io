@@ -44,6 +44,9 @@ const Text = React.forwardRef<HTMLElement, TextLayoutElement & TextPropsRef>(
       scale,
       rotate,
       zIndex,
+      wordBreak = "keep-all",
+      wordWrap = "break-word",
+      overflowWrap = "break-word",
       userSelect,
       transition = { duration: 0.25, type: "ease-in-out" },
       _hover,
@@ -55,30 +58,6 @@ const Text = React.forwardRef<HTMLElement, TextLayoutElement & TextPropsRef>(
     },
     ref
   ) => {
-    const pPs = {
-      w,
-      maxW,
-      minW,
-      h,
-      maxH,
-      minH,
-      padding,
-      margin,
-      size,
-      weight,
-      align,
-      color,
-      shadow,
-      transform,
-      decoration,
-      lineHeight,
-      whiteSpace,
-      ellipsis,
-      opacity,
-      scale,
-      rotate,
-    };
-
     const Component = as || "p";
 
     //
@@ -93,6 +72,9 @@ const Text = React.forwardRef<HTMLElement, TextLayoutElement & TextPropsRef>(
         minHeight: props?.minH,
 
         opacity: props.opacity,
+        wordBreak: props.wordBreak,
+        wordWrap: props.wordWrap,
+        overflowWrap: props.overflowWrap,
 
         ...typographyStylesProps({
           as: props.as,
@@ -169,6 +151,33 @@ const Text = React.forwardRef<HTMLElement, TextLayoutElement & TextPropsRef>(
     //
     // combined styles
     const combinedStyles = useMemo(() => {
+      const pPs = {
+        w,
+        maxW,
+        minW,
+        h,
+        maxH,
+        minH,
+        padding,
+        margin,
+        size,
+        weight,
+        align,
+        color,
+        shadow,
+        transform,
+        decoration,
+        lineHeight,
+        whiteSpace,
+        ellipsis,
+        opacity,
+        scale,
+        rotate,
+        wordBreak,
+        wordWrap,
+        overflowWrap,
+      };
+
       const baseProps = {
         ...pPs,
         size: pPs.size ?? 15,
@@ -185,7 +194,35 @@ const Text = React.forwardRef<HTMLElement, TextLayoutElement & TextPropsRef>(
           ${mediaStyles}
           ${pseudoStyles}
       `;
-    }, [baseStyle, pPs, mediaStyles, pseudoStyles]);
+    }, [
+      baseStyle,
+      mediaStyles,
+      pseudoStyles,
+      w,
+      maxW,
+      minW,
+      h,
+      maxH,
+      minH,
+      padding,
+      margin,
+      size,
+      weight,
+      align,
+      color,
+      shadow,
+      transform,
+      decoration,
+      lineHeight,
+      whiteSpace,
+      ellipsis,
+      opacity,
+      scale,
+      rotate,
+      wordBreak,
+      wordWrap,
+      overflowWrap,
+    ]);
 
     const combinedClassName = cx(`dble-text${as ? `-${as}` : ""}`, className);
 

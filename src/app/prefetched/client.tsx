@@ -1,9 +1,16 @@
 "use client";
 
 import axiosInstance from "@/lib/api/axios";
+import { getQueryClient } from "@/lib/provider/QueryProvider";
 import styled from "@emotion/styled";
-import { useQuery } from "@tanstack/react-query";
+import {
+  dehydrate,
+  HydrationBoundary,
+  QueryClientProvider,
+  useQuery,
+} from "@tanstack/react-query";
 import Link from "next/link";
+import { useEffect } from "react";
 
 // Styled components
 const Container = styled.div`
@@ -48,7 +55,33 @@ const fetchTodos = async () => {
   return response.data;
 };
 
+// Client-side wrapper component that handles React Query
 export default function PrefetchedClient() {
+  // Create a client
+  const queryClient = getQueryClient();
+
+  // Prefetch on mount
+  useEffect(() => {
+    queryClient.prefetchQuery({
+      queryKey: ["todos"],
+      queryFn: fetchTodos,
+    });
+  }, [queryClient]);
+
+  // Create a dehydrated state
+  const dehydratedState = dehydrate(queryClient);
+
+  return (
+    <HydrationBoundary state={dehydratedState}>
+      <QueryClientProvider client={queryClient}>
+        <TodosDisplay />
+      </QueryClientProvider>
+    </HydrationBoundary>
+  );
+}
+
+// Component that displays the todos
+function TodosDisplay() {
   // The data is already prefetched and available in the cache
   const {
     data: todos,
@@ -64,10 +97,8 @@ export default function PrefetchedClient() {
       <Title>Prefetched Data with TanStack Query</Title>
 
       <Card>
-        <h2>Server-side Prefetched Todos</h2>
-        <p>
-          This data was prefetched on the server and hydrated on the client.
-        </p>
+        <h2>Client-side Prefetched Todos</h2>
+        <p>This data was prefetched on the client and hydrated.</p>
 
         {isLoading && <p>Loading...</p>}
         {error && <p>Error loading data</p>}

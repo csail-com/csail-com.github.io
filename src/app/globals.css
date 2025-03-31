@@ -49,6 +49,10 @@ h6,
 p {
   margin: 0;
   padding: 0;
+  text-rendering: optimizeLegibility;
+  word-break: break-all;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 a {
