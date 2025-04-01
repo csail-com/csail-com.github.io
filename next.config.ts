@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+import withPWA from "next-pwa";
 
 const nextConfig: NextConfig = {
   devIndicators: false,
@@ -16,6 +17,28 @@ const nextConfig: NextConfig = {
     formats: ["image/avif", "image/webp"],
     deviceSizes: [428, 600, 768, 1080, 1200, 1920],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "**",
+      },
+    ],
+  },
+
+  webpack: (config, { isServer }) => {
+    // 클라이언트 빌드에서 서버 전용 모듈을 제외
+    if (!isServer) {
+      config.resolve.fallback = {
+        ...config.resolve.fallback,
+        fs: false,
+        child_process: false,
+        net: false,
+        tls: false,
+        sharp: false,
+      };
+    }
+
+    return config;
   },
 
   async headers() {
@@ -41,4 +64,12 @@ const nextConfig: NextConfig = {
   },
 } as NextConfig;
 
-export default nextConfig;
+const pwaConfig = {
+  dest: "public",
+  register: true,
+  skipWaiting: true,
+  disable: process.env.NODE_ENV === "development",
+  publicExcludes: ["!favicons/**/*"],
+};
+
+export default withPWA(pwaConfig)(nextConfig);

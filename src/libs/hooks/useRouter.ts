@@ -54,11 +54,20 @@ export function useRouter() {
       // 맨 위로 스크롤하도록 설정
       setForceScrollTop(true);
     } else {
-      // 저장된 스크롤 위치로 복원
+      // 저장된 스크롤 위치로 복원하도록 설정 (default)
       setForceScrollTop(false);
     }
 
-    router.back();
+    // Trigger this after the scroll position is saved to avoid timing issues
+    if (window._markNavigatingBack) {
+      window._markNavigatingBack();
+    }
+
+    // Small delay to ensure scroll positions are saved before navigation
+    setTimeout(() => {
+      // Navigate back
+      router.back();
+    }, 10);
   };
 
   return {

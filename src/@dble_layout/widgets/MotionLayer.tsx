@@ -81,11 +81,11 @@ const MotionLayer = memo(
         css: cssProp,
 
         // Motion-specific props
-        initialY = 20, // 초기 Y축 위치
+        initialY = 10, // 초기 Y축 위치
         initialX = 0, // 초기 X축 위치
         initialOpacity = 0, // 초기 투명도
         delay = 0, // 애니메이션 지연 시간
-        duration = 0.5, // 애니메이션 지속 시간
+        duration = 0.25, // 애니메이션 지속 시간
         activeAnimation = false, // 애니메이션 활성화 여부
         transitionType, // 전환 유형 (tween, spring 등)
         stiffness, // 강성도 (스프링 애니메이션)

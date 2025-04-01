@@ -26,16 +26,17 @@ export default function manifest(): MetadataRoute.Manifest {
         src: "/favicons/favicon-512x512.png",
         sizes: "512x512",
         type: "image/png",
+        purpose: "any",
       },
     ],
-    // screenshots: [
-    //   {
-    //     src: "/screenshots/screenshot1.png",
-    //     sizes: "1080x1920",
-    //     type: "image/png",
-    //     label: "디블에이전시 홈 화면",
-    //   },
-    // ], // 스크린샷이미지
+    screenshots: [
+      {
+        src: "/screenshots/screenshot1.png",
+        sizes: "1080x1920",
+        type: "image/png",
+        label: "디블에이전시 홈 화면",
+      },
+    ],
     orientation: "portrait",
     id: "/",
     scope: "/",
@@ -43,5 +44,21 @@ export default function manifest(): MetadataRoute.Manifest {
     dir: "ltr",
     prefer_related_applications: false,
     categories: mySite.keywords,
+    shortcuts: [
+      {
+        name: "포트폴리오",
+        short_name: "포트폴리오",
+        description: "디블에이전시의 포트폴리오를 확인하세요",
+        url: "/portfolios",
+        icons: [{ src: "/favicons/favicon-96x96.png", sizes: "96x96" }],
+      },
+      {
+        name: "문의하기",
+        short_name: "문의",
+        description: "디블에이전시에 문의하세요",
+        url: "/contact",
+        icons: [{ src: "/favicons/favicon-96x96.png", sizes: "96x96" }],
+      },
+    ],
   };
 }

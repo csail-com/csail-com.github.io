@@ -8,6 +8,7 @@
   user-select: auto;
   -webkit-touch-callout: none;
   -webkit-text-size-adjust: auto;
+  -webkit-tap-highlight-color: transparent;
 }
 
 html {
@@ -22,7 +23,7 @@ body {
   padding: 0;
   width: 100%;
   height: 100%;
-
+  min-height: 100vh;
   overflow-x: hidden;
   overflow-y: auto;
   text-rendering: optimizeLegibility;
@@ -149,6 +150,9 @@ select {
   text-decoration: none;
   background-color: transparent;
   resize: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 input[type="checkbox"],
@@ -179,9 +183,10 @@ select {
   &:hover,
   &:focus,
   &:active {
-    outline: none;
-    box-shadow: none;
-    border: none;
+    outline: none !important;
+    box-shadow: none !important;
+    border: none !important;
+    -webkit-tap-highlight-color: transparent !important;
   }
 }
 
@@ -191,23 +196,23 @@ input[type="number"]::-webkit-inner-spin-button {
   margin: 0;
 }
 
-&:-webkit-autofill,
-&:-webkit-autofill:hover,
-&:-webkit-autofill:focus,
-&:-webkit-autofill:active {
-  -webkit-text-fill-color: #797979;
-  -webkit-box-shadow: 0 0 0px 1000px transparent inset;
-  box-shadow: 0 0 0px 1000px transparent inset;
-  transition: background-color 5000s ease-in-out 0s;
-  transition-delay: 9999s;
+/* Remove autofill styles */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: background-color 5000s ease-in-out 0s !important;
+  -webkit-text-fill-color: inherit !important;
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset !important;
+  background-clip: content-box !important;
 }
 
-&:autofill,
-&:autofill:hover,
-&:autofill:focus,
-&:autofill:active {
-  -webkit-text-fill-color: #797979;
-  -webkit-box-shadow: 0 0 0px 1000px transparent inset;
-  box-shadow: 0 0 0px 1000px transparent inset;
-  transition: background-color 5000s ease-in-out 0s;
+/* Remove focus highlight on mobile */
+@media (max-width: 768px) {
+  input,
+  textarea,
+  select,
+  button {
+    -webkit-tap-highlight-color: transparent;
+  }
 }

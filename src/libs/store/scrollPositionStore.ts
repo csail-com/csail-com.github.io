@@ -5,6 +5,7 @@ import { useCallback, useEffect, useState } from "react";
 // 로컬 스토리지 키
 const SCROLL_POSITIONS_KEY = "scrollPositions";
 const FORCE_SCROLL_TOP_KEY = "forceScrollTop";
+const LAST_PATH_KEY = "lastPath";
 
 // 브라우저 환경인지 확인하는 함수
 const isBrowser = typeof window !== "undefined";
@@ -38,6 +39,7 @@ export function useScrollPositionStore() {
   // 로컬 상태
   const [positions, setPositions] = useState<Record<string, number>>({});
   const [forceScrollTop, setForceScrollTop] = useState(false);
+  const [lastPath, setLastPath] = useState<string | null>(null);
 
   // 브라우저 환경에서만 로컬 스토리지에서 초기값 로드
   useEffect(() => {
@@ -53,7 +55,19 @@ export function useScrollPositionStore() {
         false
       );
       setForceScrollTop(savedForceScrollTop);
+
+      const savedLastPath = getItemFromStorage<string | null>(
+        LAST_PATH_KEY,
+        null
+      );
+      setLastPath(savedLastPath);
     }
+  }, []);
+
+  // Track the current path
+  const trackPath = useCallback((path: string) => {
+    setLastPath(path);
+    setItemToStorage(LAST_PATH_KEY, path);
   }, []);
 
   // 특정 경로의 스크롤 위치 저장
@@ -99,9 +113,11 @@ export function useScrollPositionStore() {
   return {
     positions,
     forceScrollTop,
+    lastPath,
     saveScrollPosition,
     getScrollPosition,
     clearScrollPositions,
     setForceScrollTop: setForceScrollTopValue,
+    trackPath,
   };
 }

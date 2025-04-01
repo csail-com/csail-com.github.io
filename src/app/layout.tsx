@@ -2,7 +2,6 @@ import AppProvider from "@/libs/provider/AppProvider";
 import { mySite } from "@/libs/site/mySite";
 import type { Metadata } from "next";
 import { Noto_Sans_KR } from "next/font/google";
-import Script from "next/script";
 import "./globals.css";
 
 const notoSansKr = Noto_Sans_KR({
@@ -32,7 +31,10 @@ export const metadata: Metadata = {
   },
   // SNS 공유용 이미지 및 정보 설정
   openGraph: {
-    title: mySite.title,
+    title: {
+      default: mySite.title,
+      template: `%s | ${mySite.name}`,
+    },
     description: mySite.description,
     url: process.env.NEXT_PUBLIC_BASE_URL || mySite.url,
     siteName: mySite.name,
@@ -210,48 +212,32 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const jsonLdArray = generateJsonLd();
+
   return (
-    <html lang="ko">
+    <html
+      lang="ko"
+      className={`${notoSansKr.variable}`}
+      suppressHydrationWarning
+    >
       <head>
-        {/* JSON-LD 구조화 데이터 */}
-        <Script
-          id="json-ld"
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(generateJsonLd()) }}
-        />
-        {/* 커스텀 viewport 설정 */}
+        <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1, minimum-scale=1, shrink-to-fit=no, viewport-fit=cover"
+          name="apple-mobile-web-app-status-bar-style"
+          content="black-translucent"
         />
-        {/* PWA 관련 추가 메타 태그 */}
+        <meta name="apple-mobile-web-app-title" content={mySite.name} />
+        <link rel="apple-touch-icon" href="/favicons/favicon-180x180.png" />
         <meta name="theme-color" content="#ffffff" />
-        <link rel="manifest" href="/manifest.json" />
-        <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
-
-        {/* 서비스 워커 등록 스크립트 */}
-        <Script id="register-sw" strategy="afterInteractive">
-          {`
-            if ('serviceWorker' in navigator) {
-              window.addEventListener('load', function() {
-                navigator.serviceWorker.register('/sw.js').then(
-                  function(registration) {
-                    console.log('Service Worker 등록 성공:', registration.scope);
-                  },
-                  function(err) {
-                    console.log('Service Worker 등록 실패:', err);
-                  }
-                );
-              });
-            }
-          `}
-        </Script>
+        {jsonLdArray.map((jsonLd, index) => (
+          <script
+            key={index}
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          />
+        ))}
       </head>
-
-      <body
-        className={`${notoSansKr.variable} antialiased`}
-        suppressHydrationWarning
-      >
+      <body suppressHydrationWarning>
         <AppProvider>{children}</AppProvider>
       </body>
     </html>

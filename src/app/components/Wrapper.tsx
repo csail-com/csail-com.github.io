@@ -1,6 +1,7 @@
 /** @jsxImportSource @emotion/react */
 "use client";
 
+import { useRouter } from "@/libs/hooks/useRouter";
 import {
   Background,
   Button,
@@ -8,8 +9,7 @@ import {
   MotionLayer,
   Padding,
   Text,
-} from "@/@dble_layout";
-import { useRouter } from "@/libs/hooks/useRouter";
+} from "../../@dble_layout";
 
 export default function Wrapper() {
   const router = useRouter();
