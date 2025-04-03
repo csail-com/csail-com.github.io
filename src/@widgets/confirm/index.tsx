@@ -2,11 +2,10 @@
 "use client";
 
 import { Interpolation, Theme, keyframes } from "@emotion/react";
-import { ReactNode, useEffect, useRef, useState } from "react";
+import { ReactNode, useCallback, useEffect, useRef, useState } from "react";
 
 //
 
-import { useModalStatic } from "../modal/pice/useModalStatic";
 import CheckAnimateIcon from "./CheckAnimateIcon";
 import { ConfirmTitle } from "./ConfirmTitle";
 
@@ -112,14 +111,30 @@ const BottomConfirmBox: React.FC<Props> = ({
     }
   }, [delayedOpen, type]);
 
-  // 모달 설정
-  useModalStatic({
-    ref,
-    open: delayedOpen,
-    onCancel: handleCancel || onConfirm,
-    clickOutSideClose: !isAutoClosing && type !== "failed", // 자동 닫힘 중이거나 실패 타입일 때는 외부 클릭 비활성화
-    windowScreenScroll: true,
-  });
+  // 모달 외부 클릭 핸들러
+  const clickOutSideClose = !isAutoClosing && type !== "failed";
+  const clickModalOutside = useCallback(
+    (event: MouseEvent) => {
+      if (
+        clickOutSideClose &&
+        open &&
+        ref &&
+        "current" in ref &&
+        ref.current &&
+        !ref.current.contains(event.target as Node)
+      ) {
+        handleCancel();
+      }
+    },
+    [open, handleCancel, clickOutSideClose, ref]
+  );
+
+  useEffect(() => {
+    document.addEventListener("mousedown", clickModalOutside);
+    return () => {
+      document.removeEventListener("mousedown", clickModalOutside);
+    };
+  }, [clickModalOutside]);
 
   return (
     <>
