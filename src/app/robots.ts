@@ -1,4 +1,5 @@
 import { menus } from "@/libs/site/menus";
+import { mySite } from "@/libs/site/mySite";
 import { MetadataRoute } from "next";
 
 /**
@@ -6,8 +7,7 @@ import { MetadataRoute } from "next";
  * 검색 엔진 최적화를 위한 크롤링 규칙 설정
  */
 export default function robots(): MetadataRoute.Robots {
-  // 기본 URL 설정
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://dbleagency.com";
+  const baseUrl = mySite.url;
 
   // menus.ts에서 URL 가져와서 allow 배열 생성
   const allowUrls = menus.map((menu) =>
@@ -23,8 +23,6 @@ export default function robots(): MetadataRoute.Robots {
         disallow: [
           "/not-found",
           "/not-found/*",
-          "/error",
-          "/error/*",
           "/offline",
           "/*.json$",
           "/api/*",

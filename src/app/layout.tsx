@@ -20,7 +20,6 @@ export const viewport: Viewport = {
   themeColor: "#ffffff",
 };
 
-// 기본 메타데이터 (페이지별로 재정의 가능)
 export const metadata: Metadata = {
   title: {
     default: mySite.title,
@@ -231,6 +230,12 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <head>
+        <link
+          rel="alternate"
+          type="application/rss+xml"
+          title={`${mySite.title} RSS Feed`}
+          href="/rss.xml"
+        />
         {jsonLdArray.map((jsonLd, index) => (
           <script
             key={index}

@@ -1,4 +1,5 @@
 import { menus } from "@/libs/site/menus";
+import { mySite } from "@/libs/site/mySite";
 import { MetadataRoute } from "next";
 
 /**
@@ -6,8 +7,7 @@ import { MetadataRoute } from "next";
  * 검색엔진 최적화를 위한 페이지 우선순위 및 업데이트 빈도 설정
  */
 export default function sitemap(): MetadataRoute.Sitemap {
-  // 기본 URL 설정
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://yourdomain.com";
+  const baseUrl = mySite.url;
 
   // 현재 날짜를 lastModified로 사용
   const currentDate = new Date().toISOString();
