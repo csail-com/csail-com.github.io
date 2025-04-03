@@ -13,9 +13,21 @@ type BackOptions = {
   scroll?: "top" | "restore";
 };
 
+// 라우터 네비게이션 옵션 타입 정의
+type RouterOptions = {
+  pathname?: string;
+  query?: Record<string, any>;
+  hash?: string;
+};
+
+// Page Router 호환 라우터 옵션
+type PageRouterOptions = {
+  scroll?: boolean;
+  shallow?: boolean;
+};
+
 /**
- * useSearchParams()를 사용하지 않는 간단한 라우터 훅
- * App Router 구조에서 문제없이 사용 가능하며, useRouter.ts의 주요 기능들을 포함합니다.
+ * App Router 구조에서 Pages Router와 유사한 API를 제공하는 라우터 훅
  * 스크롤 위치를 기억하는 기능도 포함되어 있습니다.
  */
 export function useRouter() {
@@ -26,6 +38,20 @@ export function useRouter() {
 
   // 라우트 패턴 가져오기
   const route = useMemo(() => pathname || "", [pathname]);
+
+  // params 객체만 활용하여 query 객체 생성 (useSearchParams 사용 안함)
+  const query = useMemo(() => {
+    const queryObj: Record<string, any> = {};
+
+    // params 객체의 값들을 query에 추가
+    if (params) {
+      Object.entries(params).forEach(([key, value]) => {
+        queryObj[key] = value;
+      });
+    }
+
+    return queryObj;
+  }, [params]);
 
   // 페이지 이동 시 스크롤 위치 저장
   useEffect(() => {
@@ -41,6 +67,76 @@ export function useRouter() {
       saveScrollPosition(pathname, window.scrollY);
     };
   }, [pathname, saveScrollPosition]);
+
+  // URL 생성 헬퍼 함수
+  const createUrl = (options: RouterOptions | string) => {
+    if (typeof options === "string") return options;
+
+    const {
+      pathname: targetPath = "/",
+      query: targetQuery = {},
+      hash = "",
+    } = options;
+
+    // 쿼리 파라미터 문자열 생성
+    const searchParams = new URLSearchParams();
+    Object.entries(targetQuery).forEach(([key, value]) => {
+      if (value !== undefined && value !== null) {
+        searchParams.append(key, String(value));
+      }
+    });
+
+    const queryString = searchParams.toString();
+    const hashString = hash ? `#${hash}` : "";
+
+    return `${targetPath}${queryString ? `?${queryString}` : ""}${hashString}`;
+  };
+
+  // push 메서드 래핑 (Pages Router 방식 지원)
+  const customPush = (
+    url: RouterOptions | string,
+    as?: string,
+    options?: PageRouterOptions
+  ) => {
+    // 현재 pathname 저장
+    if (pathname) {
+      saveScrollPosition(pathname, window.scrollY);
+    }
+
+    // 스크롤 옵션 처리
+    if (options?.scroll === false) {
+      // 스크롤 방지 처리
+      const targetPath = typeof url === "string" ? url : createUrl(url);
+      router.push(targetPath, { scroll: false });
+    } else {
+      // 기본 동작
+      const targetPath = typeof url === "string" ? url : createUrl(url);
+      router.push(targetPath);
+    }
+  };
+
+  // replace 메서드 래핑 (Pages Router 방식 지원)
+  const customReplace = (
+    url: RouterOptions | string,
+    as?: string,
+    options?: PageRouterOptions
+  ) => {
+    // 현재 pathname 저장
+    if (pathname) {
+      saveScrollPosition(pathname, window.scrollY);
+    }
+
+    // 스크롤 옵션 처리
+    if (options?.scroll === false) {
+      // 스크롤 방지 처리
+      const targetPath = typeof url === "string" ? url : createUrl(url);
+      router.replace(targetPath, { scroll: false });
+    } else {
+      // 기본 동작
+      const targetPath = typeof url === "string" ? url : createUrl(url);
+      router.replace(targetPath);
+    }
+  };
 
   // 스크롤 위치 복원 기능이 포함된 뒤로가기 함수
   const handleBack = (options?: BackOptions) => {
@@ -72,15 +168,15 @@ export function useRouter() {
 
   return {
     pathname,
-    asPath: pathname, // 쿼리 파라미터 없는 단순 버전
+    asPath: pathname,
     route,
     params: params || {},
     isReady: true,
-    query: {}, // 쿼리 파라미터 없는 빈 객체
+    query, // 이제 params 값을 포함
     // 라우터 메서드
-    push: router.push,
-    replace: router.replace,
-    back: handleBack, // 스크롤 위치 복원 기능이 포함된 뒤로가기
+    push: customPush, // Pages Router 방식 지원
+    replace: customReplace, // Pages Router 방식 지원
+    back: handleBack,
     forward: router.forward,
     refresh: router.refresh,
     prefetch: router.prefetch,

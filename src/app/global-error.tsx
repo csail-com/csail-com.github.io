@@ -1,4 +1,3 @@
-/** @jsxImportSource @emotion/react */
 "use client";
 import ErrorView from "@/components/_layout/ErrorView";
 

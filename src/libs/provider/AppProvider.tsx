@@ -25,22 +25,34 @@ export default function AppProvider({ children }: { children: ReactNode }) {
           <RecoilProvider>
             <ScrollPositionProvider>
               <JengaProvider>
-                {/* {shouldShowLayout && <Appbar />} */}
-
-                <main
+                <div
                   css={{
                     width: "100%",
                     height: "100%",
+                    minHeight: "100vh",
                     flex: 1,
                     display: "flex",
                     flexDirection: "column",
                     alignItems: "center",
                   }}
                 >
-                  {children}
-                </main>
+                  {/* {shouldShowLayout && <Appbar />} */}
 
-                {/* {shouldShowLayout && <Footer />} */}
+                  <main
+                    css={{
+                      width: "100%",
+                      height: "100%",
+                      flex: 1,
+                      display: "flex",
+                      flexDirection: "column",
+                      alignItems: "center",
+                    }}
+                  >
+                    {children}
+                  </main>
+
+                  {/* {shouldShowLayout && <Footer />} */}
+                </div>
               </JengaProvider>
             </ScrollPositionProvider>
           </RecoilProvider>

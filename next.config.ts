@@ -6,6 +6,8 @@ const nextConfig: NextConfig = {
   compiler: {
     emotion: true,
   },
+  // 개발 환경에서 불필요한 리렌더링 방지
+  reactStrictMode: false,
 
   images: {
     unoptimized: true,
@@ -20,12 +22,26 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         protocol: "https",
+        hostname: "imagedelivery.net",
+        port: "",
+        pathname: "/vJSpkH6oHM7zquolzolo7A/**",
+      },
+      {
+        protocol: "https",
         hostname: "**",
       },
     ],
   },
 
-  webpack: (config, { isServer }) => {
+  webpack: (config, { dev, isServer }) => {
+    // 개발 환경에서 불필요한 리빌드 방지
+    if (dev) {
+      config.watchOptions = {
+        poll: 1000,
+        aggregateTimeout: 300,
+      };
+    }
+
     // 클라이언트 빌드에서 서버 전용 모듈을 제외
     if (!isServer) {
       config.resolve.fallback = {

@@ -1,6 +1,6 @@
 import AppProvider from "@/libs/provider/AppProvider";
 import { mySite } from "@/libs/site/mySite";
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Noto_Sans_KR } from "next/font/google";
 import "./globals.css";
 
@@ -9,6 +9,16 @@ const notoSansKr = Noto_Sans_KR({
   weight: ["100", "300", "400", "500", "700", "900"],
   variable: "--font-noto-sans-kr",
 });
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+  viewportFit: "cover",
+  colorScheme: "light",
+  themeColor: "#ffffff",
+};
 
 // 기본 메타데이터 (페이지별로 재정의 가능)
 export const metadata: Metadata = {
@@ -52,7 +62,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "디블에이전시 - 디자인과 개발의 만남",
+    title: mySite.title,
     description: mySite.description,
     images: [mySite.ogImageUrl], // Twitter용 이미지 (public 폴더에 추가 필요)
     creator: "@dbleagency", // 트위터 계정이 있다면 추가
@@ -221,14 +231,6 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <head>
-        <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta
-          name="apple-mobile-web-app-status-bar-style"
-          content="black-translucent"
-        />
-        <meta name="apple-mobile-web-app-title" content={mySite.name} />
-        <link rel="apple-touch-icon" href="/favicons/favicon-180x180.png" />
-        <meta name="theme-color" content="#ffffff" />
         {jsonLdArray.map((jsonLd, index) => (
           <script
             key={index}

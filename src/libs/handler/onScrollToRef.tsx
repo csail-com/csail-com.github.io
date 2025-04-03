@@ -1,3 +1,4 @@
+"use client";
 import { MutableRefObject } from "react";
 
 export default function onScrollToNextRef(
@@ -5,17 +6,20 @@ export default function onScrollToNextRef(
   position?: number
 ) {
   const scrollHandler = () => {
-    if (ref.current instanceof HTMLElement) {
-      // Check if ref.current is an HTML element
-      const elementTop =
-        ref.current.getBoundingClientRect().top + window.scrollY;
+    if (!ref || !ref.current) {
+      console.warn("Ref is not initialized or current is null");
+      return;
+    }
 
+    const element = ref.current;
+    if (element instanceof HTMLElement) {
+      const elementTop = element.getBoundingClientRect().top + window.scrollY;
       window.scrollTo({
         top: elementTop - (position ?? 90),
         behavior: "smooth",
       });
     } else {
-      console.error("The ref is not attached to a valid HTML element.");
+      console.warn("Ref is not attached to a valid HTML element");
     }
   };
 
