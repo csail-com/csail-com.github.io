@@ -13,29 +13,13 @@ import {
 import CheckIcon from "@/@widgets/confirm/CheckAnimateIcon";
 import { useRouter } from "@/libs/hooks";
 import { useConfirm } from "@/libs/provider/ConfirmProvider";
+import { useDialog } from "@/libs/provider/DialogProvider";
 import { useState } from "react";
-
-// 성공하는 비동기 함수 예제
-const mockSuccessAPI = () => {
-  return new Promise<string>((resolve) => {
-    setTimeout(() => {
-      resolve("데이터를 성공적으로 가져왔습니다");
-    }, 1500);
-  });
-};
-
-// 실패하는 비동기 함수 예제
-const mockFailAPI = () => {
-  return new Promise<string>((resolve, reject) => {
-    setTimeout(() => {
-      reject(new Error("네트워크 오류가 발생했습니다"));
-    }, 1500);
-  });
-};
 
 export default function Page() {
   const router = useRouter();
   const { onConfirm } = useConfirm();
+  const { openDialog } = useDialog();
   const [inputValue, setInputValue] = useState("");
 
   // 승인 처리 함수
@@ -162,8 +146,15 @@ export default function Page() {
             </div>
 
             <Button
-              onClick={handleGoToLogin}
-              css={{ backgroundColor: "#2196F3" }}
+              onClick={() =>
+                openDialog({
+                  title: "이전으로 이동하시겠어요?",
+                  message:
+                    "이전 페이지로 이동하면\n입력 또는 저장된 정보는 초기화돼요",
+                  tabName: "뒤로가기",
+                  onResult: handleGoToLogin,
+                })
+              }
             >
               로그인 페이지로 이동
             </Button>

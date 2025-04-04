@@ -14,6 +14,7 @@ import { JengaProvider } from "./JengaProvider";
 import QueryProvider from "./QueryProvider";
 import RecoilProvider from "./RecoilProvider";
 import ScrollPositionProvider from "./ScrollPositionProvider";
+import { DialogProvider } from "./DialogProvider";
 
 export default function AppProvider({ children }: { children: ReactNode }) {
   const pathname = usePathname();
@@ -26,36 +27,38 @@ export default function AppProvider({ children }: { children: ReactNode }) {
           <RecoilProvider>
             <ScrollPositionProvider>
               <ConfirmProvider>
-                <JengaProvider>
-                  <div
-                    css={{
-                      width: "100%",
-                      height: "100%",
-                      minHeight: "100vh",
-                      flex: 1,
-                      display: "flex",
-                      flexDirection: "column",
-                      alignItems: "center",
-                    }}
-                  >
-                    {/* {shouldShowLayout && <Appbar />} */}
-
-                    <main
+                <DialogProvider>
+                  <JengaProvider>
+                    <div
                       css={{
                         width: "100%",
                         height: "100%",
+                        minHeight: "100vh",
                         flex: 1,
                         display: "flex",
                         flexDirection: "column",
                         alignItems: "center",
                       }}
                     >
-                      {children}
-                    </main>
+                      {/* {shouldShowLayout && <Appbar />} */}
 
-                    {/* {shouldShowLayout && <Footer />} */}
-                  </div>
-                </JengaProvider>
+                      <main
+                        css={{
+                          width: "100%",
+                          height: "100%",
+                          flex: 1,
+                          display: "flex",
+                          flexDirection: "column",
+                          alignItems: "center",
+                        }}
+                      >
+                        {children}
+                      </main>
+
+                      {/* {shouldShowLayout && <Footer />} */}
+                    </div>
+                  </JengaProvider>
+                </DialogProvider>
               </ConfirmProvider>
             </ScrollPositionProvider>
           </RecoilProvider>

@@ -3,10 +3,105 @@
 
 import { colors } from "@/libs/themes";
 import { CSSObject, Interpolation, Theme } from "@emotion/react";
-import { useEffect, useRef, useState } from "react";
-import BlurLayer from "./pice/BlurLayer";
-import { useModalStatic } from "./pice/useModalStatic";
+import {
+  ReactNode,
+  createContext,
+  useCallback,
+  useContext,
+  useEffect,
+  useRef,
+  useState,
+} from "react";
 
+// ========== BlurLayer Component ==========
+const BlurLayer = ({ zIndex }: { zIndex?: number }) => {
+  return (
+    <div
+      css={{
+        zIndex: zIndex ?? 9900,
+        display: "flex",
+        flex: 1,
+        width: "100%",
+        height: "100%",
+        minHeight: "100vh",
+        backgroundColor: "rgba(0,0,0,0.35)",
+        position: "fixed",
+        top: 0,
+        bottom: 0,
+        left: 0,
+        right: 0,
+        overscrollBehavior: "contain",
+        paddingTop: `max(0px, env(safe-area-inset-top))`,
+        paddingBottom: `max(0px, env(safe-area-inset-bottom))`,
+        paddingLeft: `max(0px, env(safe-area-inset-left))`,
+        paddingRight: `max(0px, env(safe-area-inset-right))`,
+      }}
+    />
+  );
+};
+
+// ========== useModalStatic Hook ==========
+function useModalStatic({
+  ref,
+  open,
+  onCancel,
+  clickOutSideClose = true,
+  windowScreenScroll = false,
+}: {
+  ref: React.RefObject<HTMLDivElement | null>;
+  open: boolean;
+  onCancel: () => void;
+  clickOutSideClose?: boolean;
+  windowScreenScroll?: boolean;
+}) {
+  const initialOverflowY = useRef<string | null>(null);
+  const initialScrollY = useRef<number>(0);
+
+  const clickModalOutside = useCallback(
+    (event: MouseEvent) => {
+      if (
+        clickOutSideClose &&
+        open &&
+        ref.current &&
+        !ref.current.contains(event.target as Node)
+      ) {
+        onCancel();
+      }
+    },
+    [open, onCancel, clickOutSideClose, ref]
+  );
+
+  useEffect(() => {
+    if (!windowScreenScroll) {
+      if (open) {
+        initialOverflowY.current = document.body.style.overflowY;
+        initialScrollY.current = window.scrollY;
+
+        if (initialOverflowY.current !== "hidden") {
+          document.body.style.top = `-${initialScrollY.current}px`;
+          document.body.style.overflowY = "hidden";
+        }
+      } else {
+        if (initialOverflowY.current !== "hidden") {
+          document.body.style.top = "";
+          document.body.style.overflowY = "auto";
+          window.scrollTo(0, initialScrollY.current);
+        }
+      }
+    }
+  }, [open, windowScreenScroll]);
+
+  useEffect(() => {
+    document.addEventListener("mousedown", clickModalOutside);
+    return () => {
+      document.removeEventListener("mousedown", clickModalOutside);
+    };
+  }, [clickModalOutside]);
+
+  return null;
+}
+
+// ========== Dialog Component ==========
 interface DialogProps {
   open: boolean;
   title: string;
@@ -48,7 +143,6 @@ const Dialog: React.FC<DialogProps> = ({
   ];
 
   const ref = useRef<HTMLDivElement>(null);
-
   const [delayedOpen, setDelayedOpen] = useState(false);
 
   const handleCancel = () => {
@@ -145,7 +239,6 @@ const Dialog: React.FC<DialogProps> = ({
                       width: "100%",
                       display: "flex",
                       alignItems: "stretch",
-
                       paddingTop: 28,
                     }}
                   >
@@ -195,10 +288,7 @@ const Dialog: React.FC<DialogProps> = ({
   );
 };
 
-export default Dialog;
-
-//
-//
+// Common style
 const flexT: Interpolation<Theme> = {
   position: "relative",
   display: "flex",
@@ -208,3 +298,72 @@ const flexT: Interpolation<Theme> = {
   height: "100%",
   transition: "0.2s ease-in-out",
 };
+
+// ========== DialogProvider Context ==========
+interface DialogContextProps {
+  openDialog: (props: DialogProviderProps) => void;
+  closeDialog: () => void;
+  onBack: (onResult: () => void) => void;
+}
+
+interface DialogProviderProps {
+  open?: boolean;
+  title: string;
+  message: string;
+  tabName: string;
+  onResult: () => void;
+}
+
+const DialogContext = createContext<DialogContextProps | undefined>(undefined);
+
+export function DialogProvider({ children }: { children: ReactNode }) {
+  const [dialogProps, setDialogProps] = useState<DialogProviderProps | null>(
+    null
+  );
+
+  const openDialog = (props: DialogProviderProps) => {
+    setDialogProps({ ...props, open: true });
+  };
+
+  const closeDialog = () => {
+    setDialogProps((prev) => (prev ? { ...prev, open: false } : prev));
+  };
+
+  const onBack = (onResult: () => void) => {
+    setDialogProps({
+      open: true,
+      title: "이전으로 이동하시겠어요?",
+      message: "이전 페이지로 이동하면\n입력 또는 저장된 정보는 초기화돼요",
+      tabName: "뒤로가기",
+      onResult,
+    });
+  };
+
+  return (
+    <DialogContext.Provider value={{ openDialog, closeDialog, onBack }}>
+      {children}
+      {dialogProps && (
+        <Dialog
+          open={dialogProps.open!}
+          title={dialogProps.title}
+          message={dialogProps.message}
+          tabName={dialogProps.tabName}
+          onConfirm={() => {
+            dialogProps.onResult();
+            closeDialog();
+          }}
+          onClose={closeDialog}
+        />
+      )}
+    </DialogContext.Provider>
+  );
+}
+
+// Custom hook for using dialog context
+export function useDialog() {
+  const context = useContext(DialogContext);
+  if (context === undefined) {
+    throw new Error("useDialog must be used within a DialogProvider");
+  }
+  return context;
+}
