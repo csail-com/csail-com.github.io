@@ -1,0 +1,20 @@
+{
+  "import": "next-video",
+  "provider": "static",
+  "output": "public/videos",
+  "videos": {
+    "section-banner": {
+      "file": "videos/section-banner.mp4",
+      "meta": {
+        "width": 1920,
+        "height": 1080
+      }
+    }
+  },
+  "development": {
+    "platform": "local"
+  },
+  "production": {
+    "platform": "local"
+  }
+}

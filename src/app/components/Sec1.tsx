@@ -2,10 +2,10 @@
 "use client";
 
 import { Layer, Spacing, Text } from "@/@dble_layout";
-import Image from "@/@widgets/image";
+// next-video 대신 React 표준 비디오 사용
+// import Video from "next-video";
 
 import useLanguage from "@/libs/provider/LanguageProvider";
-import { mySite } from "@/libs/site/mySite";
 
 export default function Sec1() {
   const { translations } = useLanguage();
@@ -20,12 +20,30 @@ export default function Sec1() {
         padding={{ top: 30, bottom: 70 }}
       >
         <Layer maxW={960} align="center">
-          <Image
-            source="/gif/section-banner.gif"
-            alt={mySite.name}
-            size={{ width: "100%", height: "100%", minWidth: 60 }}
-            ratio={{ x: 16, y: 9 }}
-          />
+          <div
+            css={{
+              width: "100%",
+              position: "relative",
+              aspectRatio: "16/9",
+              minWidth: "60px",
+              overflow: "hidden",
+            }}
+          >
+            {/* next-video 컴포넌트 대신 일반 video 요소 사용 */}
+            <video
+              src="/videos/section-banner.mp4"
+              autoPlay
+              muted
+              loop
+              playsInline
+              controls={false}
+              css={{
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+              }}
+            />
+          </div>
         </Layer>
 
         <Spacing size={20} />

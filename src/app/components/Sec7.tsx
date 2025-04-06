@@ -1,7 +1,7 @@
+/** @jsxImportSource @emotion/react */
 "use client";
 
 import { Layer, MotionLayer, Spacing, Text } from "@/@dble_layout";
-import Image from "@/@widgets/image";
 import useLanguage from "@/libs/provider/LanguageProvider";
 import { MQ } from "@/libs/themes";
 import { useScroll, useTransform } from "framer-motion";
@@ -50,12 +50,17 @@ export default function Sec7() {
           },
         }}
       >
-        <Image
-          source="/gif/orb-animate.gif"
-          alt="sec6-banner"
-          size={{ maxWidth: 400 }}
-          borderRadius={30}
+        <video
+          src="/videos/orb-animate.mp4"
+          autoPlay
+          muted
+          loop
+          playsInline
+          controls={false}
           css={{
+            width: "100%",
+            maxWidth: 400,
+            borderRadius: 30,
             [MQ[2]]: { maxWidth: "100%" },
             [MQ[3]]: { borderRadius: 20 },
           }}

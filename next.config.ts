@@ -1,4 +1,6 @@
 import type { NextConfig } from "next";
+// import 유지하되 문제 해결 후 다시 활성화
+// const { withNextVideo } = require("next-video/process");
 
 const nextConfig: NextConfig = {
   devIndicators: false,
@@ -79,4 +81,5 @@ const nextConfig: NextConfig = {
   },
 } as NextConfig;
 
+// export default withNextVideo(nextConfig);
 export default nextConfig;
