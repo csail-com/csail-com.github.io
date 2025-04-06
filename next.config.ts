@@ -1,6 +1,4 @@
 import type { NextConfig } from "next";
-// import 유지하되 문제 해결 후 다시 활성화
-// const { withNextVideo } = require("next-video/process");
 
 const nextConfig: NextConfig = {
   devIndicators: false,
@@ -81,5 +79,12 @@ const nextConfig: NextConfig = {
   },
 } as NextConfig;
 
-// export default withNextVideo(nextConfig);
+const pwaConfig = {
+  dest: "public",
+  register: true,
+  skipWaiting: true,
+  disable: process.env.NODE_ENV === "development",
+  publicExcludes: ["!favicons/**/*"],
+};
+
 export default nextConfig;
