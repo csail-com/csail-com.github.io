@@ -3,7 +3,7 @@ import { mySite } from "@/libs/site/mySite";
 import { MetadataRoute } from "next";
 
 /**
- * 디블에이전시 웹사이트의 robots.txt 설정
+ * 웹사이트의 robots.txt 설정
  * 검색 엔진 최적화를 위한 크롤링 규칙 설정
  */
 export default function robots(): MetadataRoute.Robots {

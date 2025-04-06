@@ -3,7 +3,7 @@ import { mySite } from "@/libs/site/mySite";
 import { MetadataRoute } from "next";
 
 /**
- * 디블에이전시 웹사이트의 동적 사이트맵 생성
+ * 웹사이트의 동적 사이트맵 생성
  * 검색엔진 최적화를 위한 페이지 우선순위 및 업데이트 빈도 설정
  */
 export default function sitemap(): MetadataRoute.Sitemap {

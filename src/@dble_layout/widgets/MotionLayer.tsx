@@ -3,7 +3,7 @@
 
 import { cx } from "@emotion/css";
 import { css, SerializedStyles } from "@emotion/react";
-import { motion, useInView } from "framer-motion";
+import { motion, useInView, UseInViewOptions } from "framer-motion";
 import React, {
   forwardRef,
   memo,
@@ -81,68 +81,92 @@ const MotionLayer = memo(
         css: cssProp,
 
         // Motion-specific props
-        initialY = 10, // 초기 Y축 위치
-        initialX = 0, // 초기 X축 위치
-        initialOpacity = 0, // 초기 투명도
-        delay = 0, // 애니메이션 지연 시간
-        duration = 0.25, // 애니메이션 지속 시간
-        activeAnimation = false, // 애니메이션 활성화 여부
-        transitionType, // 전환 유형 (tween, spring 등)
-        stiffness, // 강성도 (스프링 애니메이션)
-        damping, // 감쇠 계수 (스프링 애니메이션)
-        mass = 1, // 질량 (스프링 애니메이션) (1이 기본값으로 자연스러운 움직임 제공, 최댓값은 없지만 일반적으로 1-10 사이 값 사용)
-        bounce, // 탄성 (스프링 애니메이션)
-        restSpeed, // 정지 속도 (애니메이션 종료 조건)
-        restDelta, // 정지 거리 (애니메이션 종료 조건)
+        initialY = 10, // 초기 Y축 위치 오프셋 (px)
+        initialX = 0, // 초기 X축 위치 오프셋 (px)
+        initialOpacity = 0, // 초기 투명도 (0-1)
+        delay = 0, // 애니메이션 시작 전 지연 시간 (초)
+        duration = 0.5, // 애니메이션 지속 시간 (초)
+        activeAnimation = true, // 애니메이션 활성화 여부 (뷰포트 진입 시 자동 애니메이션)
+        transitionType, // 애니메이션 타입 (spring, tween, inertia 등)
+        stiffness, // 스프링 강성 - 값이 클수록 더 빠르게 움직임 (spring 타입)
+        damping, // 스프링 감쇠 - 값이 클수록 빨리 정지함 (spring 타입)
+        mass = 1, // 스프링 질량 - 값이 클수록 느리게 반응 (spring 타입)
+        bounce, // 스프링 탄성 - 값이 클수록 더 많이 튀어오름 (spring 타입)
+        restSpeed, // 스프링이 멈추는 속도 기준값 (spring 타입)
+        restDelta, // 스프링이 멈추는 거리 기준값 (spring 타입)
+
+        // Framer Motion 네이티브 props
+        initial, // 요소의 초기 상태 (렌더링 시점)
+        animate, // 요소의 애니메이션 후 상태
+        exit, // 요소가 사라질 때 애니메이션 상태 (AnimatePresence와 함께 사용)
+        variants, // 여러 애니메이션 상태를 그룹화하여 이름으로 관리
+        whileHover, // 마우스 호버 시 적용될 스타일/애니메이션
+        whileTap, // 클릭하거나 터치할 때 적용될 스타일/애니메이션
+        whileFocus, // 포커스 상태일 때 적용될 스타일/애니메이션
+        whileDrag, // 드래그하는 동안 적용될 스타일/애니메이션
+        whileInView, // 요소가 뷰포트에 보일 때 적용될 스타일/애니메이션
+        viewport, // 뷰포트 감지 옵션 설정 (amount, once 등)
+
+        // 드래그 기능
+        drag, // 드래그 활성화 및 방향 설정 (true, false, "x", "y")
+        dragConstraints, // 드래그 가능 범위 제한 (객체 또는 ref)
+        dragElastic, // 드래그 제한 경계의 탄성도 (0-1)
+        dragMomentum, // 드래그 후 관성 효과 여부
+        onDragStart, // 드래그 시작 이벤트 핸들러
+        onDrag, // 드래그 중 이벤트 핸들러
+        onDragEnd, // 드래그 종료 이벤트 핸들러
+
+        // 레이아웃 애니메이션
+        layout, // 요소 크기나 위치 변경 시 자동 애니메이션
+        layoutId,
 
         ...rest
       } = props;
 
-      // Internal reference handling
+      // 내부 참조 처리
       const innerRef = useRef<HTMLDivElement>(null);
       const motionRef = useRef<HTMLDivElement>(null);
       const currentRef = ref || motionRef;
 
-      // useInView with internal reference
-      const isInView = useInView(innerRef, { once: false });
+      // viewport 옵션 타입 안전하게 변환
+      const inViewOptions: UseInViewOptions = {
+        once: false, // DOM에 처음 진입할 때뿐만 아니라 매번 진입할 때마다 애니메이션 재생
+        amount: 0.1, // 요소의 10%만 보여도 "in view"로 간주함
+      };
 
-      // Set up reference forwarding
+      // 사용자 정의 viewport 설정이 있으면 안전하게 적용
+      if (viewport) {
+        if (viewport.once !== undefined) inViewOptions.once = viewport.once;
+        if (viewport.amount !== undefined)
+          inViewOptions.amount = viewport.amount;
+        if (viewport.root !== undefined) inViewOptions.root = viewport.root;
+        if (viewport.margin !== undefined) {
+          inViewOptions.margin = viewport.margin as any;
+        }
+      }
+
+      // useInView 훅: 요소가 화면에 보이는지 감지
+      const isInView = useInView(innerRef, inViewOptions);
+
+      // 참조 전달 설정
       useImperativeHandle(
         ref,
         () => innerRef.current || document.createElement("div")
       );
 
-      // Animation state
-      const [animate, setAnimate] = useState(false);
-      // Add a new state to track when the element entered the viewport
-      const [viewEntryTime, setViewEntryTime] = useState<number | null>(null);
+      // 애니메이션 상태
+      const [shouldAnimate, setShouldAnimate] = useState(false);
 
-      // Update animation state based on activeAnimation and isInView
+      // 컴포넌트가 viewport에 들어올 때마다 애니메이션을 재생하도록 수정
       useEffect(() => {
-        if (currentRef) {
-          if (activeAnimation && isInView) {
-            // Record the timestamp when the element enters the viewport
-            if (viewEntryTime === null) {
-              setViewEntryTime(Date.now());
-            }
-            setAnimate(true);
-          } else {
-            setAnimate(false);
-            // Reset the entry time when element leaves viewport
-            if (!isInView) {
-              setViewEntryTime(null);
-            }
-          }
-        } else {
-          setAnimate(true);
-          if (viewEntryTime === null) {
-            setViewEntryTime(Date.now());
-          }
+        if (isInView && activeAnimation) {
+          // 화면에 들어오면 애니메이션 활성화
+          setShouldAnimate(true);
+        } else if (!isInView && activeAnimation) {
+          // 화면에서 벗어나면 애니메이션 상태 초기화 (다음 진입을 위해)
+          setShouldAnimate(false);
         }
-      }, [activeAnimation, isInView, currentRef, viewEntryTime]);
-
-      // Calculate effective delay based on when the element entered the viewport
-      const effectiveDelay = viewEntryTime === null ? delay : 0; // Use 0 if element isn't in view yet
+      }, [activeAnimation, isInView]);
 
       // Extended props styles function
       const ExtendedStyles = (props: MotionLayerType): SerializedStyles => {
@@ -344,7 +368,36 @@ const MotionLayer = memo(
         className
       );
 
-      // More robust fix to ensure we always have a valid component
+      // 초기 애니메이션 상태 결정 - 제공된 initial이 있으면 사용, 없으면 기본값 사용
+      const initialState = initial || {
+        opacity: initialOpacity,
+        y: initialY,
+        x: initialX,
+      };
+
+      // 애니메이션 상태 결정 - animate가 직접 제공되면 우선 사용하되,
+      // 그렇지 않으면 isInView와 activeAnimation 상태에 따라 자동으로 설정
+      const animateState = animate || {
+        opacity: shouldAnimate || !activeAnimation ? 1 : initialOpacity,
+        y: shouldAnimate || !activeAnimation ? 0 : initialY,
+        x: shouldAnimate || !activeAnimation ? 0 : initialX,
+      };
+
+      // 트랜지션 속성 설정
+      const transitionObject = {
+        duration, // 애니메이션 지속 시간 (초)
+        delay, // 애니메이션 시작 전 지연 시간 (초)
+        ...(transitionType && { type: transitionType }), // 애니메이션 유형 (spring, tween 등)
+        ...(stiffness && { stiffness }), // 스프링 강성 (spring에서만 사용)
+        ...(damping && { damping }), // 스프링 감쇠 (spring에서만 사용)
+        ...(mass && { mass }), // 스프링 질량 (spring에서만 사용)
+        ...(bounce && { bounce }), // 스프링 탄성 (spring에서만 사용)
+        ...(restSpeed && { restSpeed }), // 스프링 정지 속도 (spring에서만 사용)
+        ...(restDelta && { restDelta }), // 스프링 정지 위치 오차 (spring에서만 사용)
+        ...(transition || {}), // 사용자 지정 트랜지션 속성
+      };
+
+      // 유효한 컴포넌트 확보
       let MotionComponent: React.ElementType = motion.div;
       if (as && typeof as === "string") {
         const requestedComponent = motion[as as keyof typeof motion];
@@ -356,30 +409,34 @@ const MotionLayer = memo(
       return (
         <MotionComponent
           ref={innerRef}
-          key={activeAnimation ? "active" : "inactive"}
           className={combinedClassName}
           css={css([combinedStyles, cssProp])}
-          initial={{
-            opacity: initialOpacity,
-            y: initialY,
-            x: initialX,
-          }}
-          animate={{
-            opacity: animate || isInView ? 1 : initialOpacity,
-            y: animate || isInView ? 0 : initialY,
-            x: animate || isInView ? 0 : initialX,
-          }}
-          transition={{
-            duration,
-            delay: effectiveDelay, // Use the effective delay
-            ...(transitionType && { type: transitionType }),
-            ...(stiffness && { stiffness }),
-            ...(damping && { damping }),
-            ...(mass && { mass }),
-            ...(bounce && { bounce }),
-            ...(restSpeed && { restSpeed }),
-            ...(restDelta && { restDelta }),
-          }}
+          // 기본 애니메이션 속성
+          initial={initialState} // 초기 상태 (요소가 처음 렌더링될 때)
+          animate={animateState} // 일반 상태 (애니메이션 후 최종 상태)
+          exit={exit} // 요소가 제거될 때 애니메이션
+          transition={transitionObject} // 애니메이션 동작 방식 정의
+          // 애니메이션 바리언트: 여러 애니메이션 상태를 미리 정의해 이름으로 전환
+          variants={variants}
+          // 인터랙션 애니메이션
+          whileHover={whileHover || (_hover && { ..._hover })} // 마우스 호버 시 애니메이션
+          whileTap={whileTap} // 클릭/탭 시 애니메이션
+          whileFocus={whileFocus || (_focus && { ..._focus })} // 포커스 시 애니메이션
+          whileDrag={whileDrag} // 드래그 시 애니메이션
+          whileInView={whileInView} // 화면에 보일 때 애니메이션
+          // 드래그 관련 속성
+          drag={drag} // 드래그 가능 여부/방향 ("x", "y", true, false)
+          dragConstraints={dragConstraints} // 드래그 제한 범위
+          dragElastic={dragElastic} // 드래그 탄성 (0-1)
+          dragMomentum={dragMomentum} // 드래그 관성 여부
+          onDragStart={onDragStart} // 드래그 시작 이벤트
+          onDrag={onDrag} // 드래그 중 이벤트
+          onDragEnd={onDragEnd} // 드래그 종료 이벤트
+          // 레이아웃 애니메이션
+          layout={layout} // 요소의 레이아웃 변경 시 자동 애니메이션
+          layoutId={layoutId} // 서로 다른 컴포넌트 간 애니메이션 전환을 위한 ID
+          // 뷰포트 감지 옵션
+          viewport={viewport} // 요소의 가시성 감지 옵션
           {...(rest as React.HTMLProps<HTMLDivElement>)}
         >
           {children}

@@ -1,0 +1,35 @@
+{
+  "title": "Beyond Boundaries, Creating Technology the World Has Never Seen",
+  "description": "Through limitless research and imagination, we unlock new frontiers of technology no one has ever reached.",
+  "itmes": [
+    {
+      "label": "AI Robot",
+      "txt": "An AI-powered robot that thinks, decides, and interacts with the world on its own  "
+    },
+
+    {
+      "label": "Unsupervised\n Learning-based AI",
+      "txt": "AI that learns without being taught"
+    },
+    {
+      "label": "Reinforcement\n Learning-based AI",
+      "txt": "AI that learns independently and grows through trial and error   "
+    }
+  ],
+  "sec1": {
+    "title": "AI, Designing Trust",
+    "description": "AI that predicts risks,\n Trusted technology that shields against even invisible threats"
+  },
+  "sec2": {
+    "title": "With the Individual, AI in Devices",
+    "description": "Your data belongs to you \nOn-device AI that keeps your data private without sacrificing performance"
+  },
+  "sec3": {
+    "title": "Respecting People, AI for Everyone",
+    "description": "A warm, human-centered AI platform that respects people and supports those often overlooked."
+  },
+  "sec4": {
+    "title": "Completing a Sustainable Future with AI",
+    "description": "Sustainable AI that puts energy, the environment, and society first  \nAI technology built for the future of humanity and our planet"
+  }
+}
