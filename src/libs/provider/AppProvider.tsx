@@ -10,12 +10,14 @@ import { LanguageProvider } from "@/libs/provider/LanguageProvider";
 import { menus } from "@/libs/site/menus";
 import { usePathname } from "next/navigation";
 import { type ReactNode } from "react";
+import { useOpenWebBrowser } from "../hooks";
 import EmotionProvider from "./EmotionProvider";
 import ScrollPositionProvider from "./ScrollPositionProvider";
 
 export default function AppProvider({ children }: { children: ReactNode }) {
   const pathname = usePathname();
   const shouldShowLayout = menus.some((menu) => pathname.includes(menu.url));
+  useOpenWebBrowser();
 
   return (
     <EmotionProvider>

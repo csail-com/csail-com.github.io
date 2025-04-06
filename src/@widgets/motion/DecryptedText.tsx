@@ -241,14 +241,19 @@ export default function DecryptedText({
       style={styles.wrapper}
       css={{
         textAlign: "center",
+        fontSize: 18,
         whiteSpace: "pre-line",
+        lineHeight: 1.6,
       }}
       {...hoverProps}
       {...props}
     >
       {/* <span style={styles.srOnly}>{displayText}</span> */}
 
-      <span aria-hidden="true" css={{ fontSize: 18, textAlign: "center" }}>
+      <span
+        aria-hidden="true"
+        css={{ fontSize: 18, lineHeight: 1.6, textAlign: "center" }}
+      >
         {displayText.split("").map((char, index) => {
           const isRevealedOrDone =
             revealedIndices.has(index) || !isScrambling || !isHovering;
@@ -258,6 +263,7 @@ export default function DecryptedText({
               as="span"
               key={index}
               size={18}
+              lineHeight={1.6}
               color="#c2c2c2"
               align="center"
               _mq={{

@@ -35,7 +35,7 @@ export default function Sec2() {
             key={item.label}
             maxW={500}
             align="center"
-            padding={{ all: 25 }}
+            padding={{ horizontal: 25 }}
             initialY={0}
             delay={i * 0.2}
             initialOpacity={0}
@@ -64,11 +64,13 @@ export default function Sec2() {
 
             <Spacing size={20} />
 
-            <DecryptedText
-              text={item.txt}
-              animateOn="view"
-              revealDirection="center"
-            />
+            <Layer w="auto" minH={100}>
+              <DecryptedText
+                text={item.txt}
+                animateOn="view"
+                revealDirection="center"
+              />
+            </Layer>
           </MotionLayer>
         ))}
       </Layer>
